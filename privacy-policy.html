@@ -1,65 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LexiGrid</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            max-width: 800px;
-            color: #333;
-        }
-        h1, h2 {
-            color: #2c3e50;
-        }
-        a {
-            color: #2980b9;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - LexiGrid</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; max-width: 900px; color: #333; }
+    h1, h2 { color: #2c3e50; }
+    a { color: #2980b9; }
+    ul { margin-top: 0.5rem; }
+    .small { font-size: 0.95rem; color: #555; }
+    .block { background:#f8fbff; border:1px solid #e3eefb; padding:14px 16px; border-radius:8px; }
+  </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p><strong>Last updated:</strong> July 1, 2025</p>
+  <h1>Privacy Policy</h1>
+  <p><strong>Last updated:</strong> October 16, 2025</p>
 
-    <p><strong>LexiGrid</strong> ("the App") is a mobile game developed by <strong>XordBX</strong>.</p>
-    <p>This privacy policy explains how your information is collected, used, and disclosed when you use the App.</p>
+  <p><strong>LexiGrid</strong> (the “App”) is a mobile game developed by <strong>XoRdbX</strong>. This Privacy Policy explains what data we process, why, and how you can exercise your rights—especially regarding consent under the GDPR and Google’s User Messaging Platform (UMP).</p>
 
-    <h2>1. Information Collected</h2>
-    <p>The App itself does <strong>not collect any personal information</strong> directly.</p>
-    <p>However, the App displays advertisements using <strong>Google AdMob</strong>, which may collect:</p>
-    <ul>
-        <li>Device information (e.g., model, OS version, language)</li>
-        <li>Advertising ID (for personalized ads)</li>
-        <li>Interaction data (ad impressions, clicks)</li>
-    </ul>
+  <h2>1. Summary</h2>
+  <div class="block small">
+    <p>We use <strong>Google AdMob</strong> to show ads and <strong>Firebase Analytics</strong> to understand how the game is used. In the European Economic Area (EEA/UK), we ask for your consent via <strong>Google UMP</strong> before collecting analytics or showing personalized ads. If you refuse consent, analytics are disabled and only non-personalized ads are shown.</p>
+  </div>
 
-    <h2>2. Third-Party Services</h2>
-    <p>We use the following third-party service:</p>
-    <ul>
-        <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a></li>
-    </ul>
-    <p>These services may collect data to serve relevant ads and improve user experience. You can opt-out of personalized ads in your device settings.</p>
+  <h2>2. Data We Process</h2>
+  <p>The App does not collect names, emails, or other directly identifying data. Through our partners, the following categories may be processed:</p>
+  <ul>
+    <li><strong>Analytics (Firebase Analytics)</strong>: app instance identifiers, session data (session start/length), device info (model, OS version, language), country/region, in-game events (e.g., level start/complete, boosters used), crash/quality signals.</li>
+    <li><strong>Advertising (Google AdMob)</strong>: Advertising ID, ad impressions and clicks, basic device information; if consent is granted, ads may be personalized using Google’s signals.</li>
+  </ul>
+  <p class="small">We configure the App so that analytics collection can be fully disabled until consent is given (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), and AdMob respects your UMP choices (personalized vs. non-personalized ads).</p>
 
-    <h2>3. Children's Privacy</h2>
-    <p>LexiGrid is intended for a general audience. We do not knowingly collect data from children under 13. If you believe we have unintentionally collected such data, please contact us.</p>
+  <h2>3. Purposes of Processing</h2>
+  <ul>
+    <li><strong>Provide and improve the game</strong> (measure features, balance gameplay, fix bugs and performance issues).</li>
+    <li><strong>Show ads</strong> to fund the App (personalized only with consent; otherwise non-personalized).</li>
+    <li><strong>Security and abuse prevention</strong> (aggregate signals to protect services).</li>
+  </ul>
 
-    <h2>4. Data Security</h2>
-    <p>We do not store or transmit any personal data ourselves. Third-party partners are responsible for the data they collect and must comply with data protection laws.</p>
+  <h2>4. Legal Bases (GDPR)</h2>
+  <ul>
+    <li><strong>Consent</strong> (Art. 6(1)(a)): analytics measurement and personalized advertising in the EEA/UK are based on your explicit consent collected via UMP.</li>
+    <li><strong>Legitimate interests</strong> (Art. 6(1)(f)): essential operations such as delivering non-personalized ads and ensuring the App’s security and basic functionality.</li>
+  </ul>
 
-    <h2>5. Your Choices</h2>
-    <p>You can:</p>
-    <ul>
-        <li>Disable ad personalization via device settings</li>
-        <li>Restrict data sharing in your Google account</li>
-    </ul>
+  <h2>5. Consent & Privacy Options (UMP)</h2>
+  <p>On first launch (and periodically as required), users in the EEA/UK see a UMP consent form to:</p>
+  <ul>
+    <li>Allow or refuse analytics measurement (Firebase Analytics).</li>
+    <li>Choose between personalized or non-personalized ads (AdMob).</li>
+  </ul>
+  <p>You can change your choice at any time from the App’s <strong>“Privacy / Ad Options”</strong> screen (which reopens the UMP privacy options form). If you withdraw consent, analytics collection is disabled going forward and ads become non-personalized.</p>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:xordbx76@gmail.com">xordbx76@gmail.com</a></p>
+  <h2>6. Data Sharing & Processors</h2>
+  <p>We do not sell or rent your data. We share data with our service providers solely to operate the App:</p>
+  <ul>
+    <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase & privacy</a></li>
+    <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">EEA/UK consent</a></li>
+  </ul>
+  <p>Google acts as our data processor for these services under Google’s data processing terms.</p>
 
-    <h2>7. Changes to this Privacy Policy</h2>
-    <p>We may update this policy from time to time. You are advised to review it regularly.</p>
+  <h2>7. International Transfers</h2>
+  <p>Data may be processed outside your country (e.g., in the United States). Google implements safeguards such as the <strong>Standard Contractual Clauses (SCCs)</strong> to comply with GDPR requirements for international transfers.</p>
+
+  <h2>8. Retention</h2>
+  <p>Analytics data is retained according to Firebase settings (typically 14–26 months) and then deleted or aggregated. Ad-related logs are retained according to Google’s policies.</p>
+
+  <h2>9. Your Rights (GDPR)</h2>
+  <p>Subject to legal limits, you have the right to:</p>
+  <ul>
+    <li>Access and receive a copy of your personal data</li>
+    <li>Request rectification or erasure (“right to be forgotten”)</li>
+    <li>Restrict or object to processing (including analytics)</li>
+    <li>Data portability</li>
+    <li>Withdraw consent at any time (without affecting prior lawful processing)</li>
+  </ul>
+  <p>Within the App, you can withdraw consent via the <strong>Privacy / Ad Options</strong> screen. You may also request deletion/reset of analytics identifiers; we can trigger <code>ResetAnalyticsData()</code> in response to your request.</p>
+
+  <h2>10. Children's Privacy</h2>
+  <p>LexiGrid is designed for a general audience and is not specifically directed at children.</p>
+
+  <p>The App does not intentionally collect or process personal information from minors. If you believe that a minor has provided personal data through the App without appropriate consent, please contact us so that we can promptly delete such information.</p>
+
+  <p>Use of the App by minors should always take place under the supervision and consent of a parent or legal guardian. The developer of LexiGrid cannot be held responsible for any use of the App by minors without such supervision or consent.</p>
+
+  <p>Parents and guardians are encouraged to monitor the digital activities of those under their care and to help ensure a safe and appropriate experience.</p>
+
+  <h2>11. Security</h2>
+  <p>We apply technical and organizational measures to protect data. However, no method of transmission or storage is completely secure.</p>
+
+  <h2>12. Your Choices & Controls</h2>
+  <ul>
+    <li><strong>In-app privacy options</strong>: open the App’s <em>Privacy / Ad Options</em> to change consent at any time (UMP).</li>
+    <li><strong>Device settings</strong>: you can reset your Advertising ID and limit ad personalization in your OS settings.</li>
+    <li><strong>Opt-out of analytics</strong>: refuse analytics in the UMP form; we will disable Firebase Analytics collection.</li>
+  </ul>
+
+  <h2>13. Contact</h2>
+  <p>If you have questions or want to exercise your rights, contact:</p>
+  <p><strong>Email:</strong> <a href="mailto:xordbx76@gmail.com">xordbx76@gmail.com</a></p>
+
+  <h2>14. Changes to this Policy</h2>
+  <p>We may update this policy from time to time. We will update the “Last updated” date above and, where appropriate, notify you in the App.</p>
+
+  <p class="small">Developer: XordBX • App: LexiGrid</p>
 </body>
 </html>
