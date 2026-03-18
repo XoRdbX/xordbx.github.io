@@ -7,39 +7,53 @@
   <meta name="description" content="XoRdbX is an independent game studio. Discover the studio identity and LexiGrid, its current word puzzle game project." />
   <style>
     :root {
-      --bg: #f4f4f2;
-      --surface: #ffffff;
-      --surface-alt: #ecebe6;
-      --text: #1f1f1b;
-      --muted: #5f5f56;
-      --accent: #1f5c47;
-      --accent-dark: #174536;
-      --border: #d8d6cd;
-      --max: 1080px;
+      --bg: #f7efe4;
+      --surface: rgba(255, 250, 244, 0.86);
+      --surface-strong: #fffaf4;
+      --surface-alt: #f2dfcf;
+      --text: #2f241f;
+      --muted: #6f5a4d;
+      --accent: #c96f3b;
+      --accent-dark: #a95629;
+      --accent-soft: #efc6a9;
+      --border: rgba(135, 94, 64, 0.18);
+      --shadow: 0 18px 42px rgba(91, 56, 33, 0.10);
+      --shadow-soft: 0 10px 24px rgba(91, 56, 33, 0.07);
+      --radius: 24px;
+      --radius-sm: 18px;
+      --max: 1120px;
     }
 
     * { box-sizing: border-box; }
 
-    html { 
-	  scroll-behavior: smooth; 
-      scroll-padding-top: 90px; /* offset for sticky header */
-	}
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
-      background: var(--bg);
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.72), transparent 30%),
+        linear-gradient(180deg, #fbf4eb 0%, var(--bg) 36%, #f3e3d3 100%);
+      line-height: 1.65;
     }
 
     a {
+      color: var(--accent-dark);
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
       color: var(--accent);
     }
 
     img {
       max-width: 100%;
       display: block;
+      height: auto;
     }
 
     .container {
@@ -48,11 +62,12 @@
     }
 
     .topbar {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 249, 242, 0.84);
+      border-bottom: 1px solid rgba(135, 94, 64, 0.12);
     }
 
     .topbar-inner {
@@ -60,73 +75,139 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      min-height: 72px;
+      min-height: 78px;
     }
 
     .brand {
-      font-size: 1.7rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.35rem;
       font-weight: 700;
       text-decoration: none;
       color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-soft), #fff4eb);
+      border: 1px solid rgba(135, 94, 64, 0.12);
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .brand-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 10px;
     }
 
     .nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
+      padding: 10px 14px;
+      border-radius: 999px;
+    }
+
+    .nav a:hover {
+      background: rgba(201, 111, 59, 0.10);
+      color: var(--accent-dark);
     }
 
     .hero {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(236,235,230,0.95));
-      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      padding: 34px 0 20px;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(12px);
+      z-index: 0;
+    }
+
+    .hero::before {
+      width: 280px;
+      height: 280px;
+      background: rgba(201, 111, 59, 0.11);
+      top: -80px;
+      left: -60px;
+    }
+
+    .hero::after {
+      width: 380px;
+      height: 380px;
+      background: rgba(255, 220, 190, 0.48);
+      right: -100px;
+      top: 20px;
     }
 
     .hero-grid {
+      position: relative;
+      z-index: 1;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 28px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
       align-items: center;
-      padding: 72px 0;
+      padding: 48px 0 66px;
     }
 
     .eyebrow {
-      margin: 0 0 10px;
-      font-size: 0.85rem;
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--accent-dark);
+      background: rgba(201, 111, 59, 0.11);
+      border: 1px solid rgba(201, 111, 59, 0.14);
     }
 
     h1, h2, h3 {
-      line-height: 1.15;
+      line-height: 1.12;
       margin: 0 0 16px;
+      letter-spacing: -0.02em;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      max-width: 10ch;
     }
 
     h2 {
-      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
     }
 
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.12rem;
     }
 
     p {
-	  text-align: justify;
       margin: 0 0 16px;
+      text-align: justify;
     }
 
     .lead {
@@ -135,66 +216,108 @@
       max-width: 720px;
     }
 
+    .hero-copy .lead {
+      font-size: 1.16rem;
+    }
+
     .actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 13px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 20px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
-      border: 1px solid var(--border);
-      background: var(--surface);
+      border: 1px solid rgba(135, 94, 64, 0.14);
+      background: rgba(255, 250, 244, 0.86);
       color: var(--text);
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(91, 56, 33, 0.12);
     }
 
     .btn.primary {
-      background: var(--accent);
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
       color: #fff;
-      border-color: var(--accent);
+      border-color: transparent;
     }
 
-    .btn.primary:hover {
-      background: var(--accent-dark);
+    .hero-card,
+    .card,
+    .license-box,
+    .media-box,
+    .video-frame {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
     }
 
     .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 28px;
-      min-height: 280px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      position: relative;
+      border-radius: 32px;
+      padding: 24px;
+      min-height: 360px;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(201, 111, 59, 0.16), transparent 34%);
+      pointer-events: none;
     }
 
     .hero-card .shot {
-      border: 2px dashed var(--border);
-      min-height: 220px;
+      position: relative;
+      z-index: 1;
+      min-height: 312px;
+      border-radius: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: var(--muted);
-      background: var(--surface-alt);
-      padding: 20px;
+      background: linear-gradient(160deg, rgba(255,250,244,0.88), rgba(241,223,207,0.84));
+      padding: 24px;
+    }
+
+    .hero-card .shot img {
+      max-height: 210px;
+      width: auto;
+      filter: drop-shadow(0 10px 28px rgba(0,0,0,0.16));
     }
 
     .section {
-      padding: 68px 0;
-      border-bottom: 1px solid var(--border);
+      position: relative;
+      padding: 76px 0;
     }
 
     .section.alt {
-      background: var(--surface);
+      background: linear-gradient(180deg, rgba(255, 250, 244, 0.62), rgba(255, 250, 244, 0.44));
+      border-top: 1px solid rgba(135, 94, 64, 0.08);
+      border-bottom: 1px solid rgba(135, 94, 64, 0.08);
     }
 
     .section-header {
       max-width: 760px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+      max-width: 12ch;
     }
 
     .two-col {
@@ -206,31 +329,75 @@
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 22px;
+    .card,
+    .license-box {
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .card h3,
+    .license-box h3 {
+      margin-bottom: 14px;
+    }
+
+    .project-visual,
+    .logo-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, rgba(255,250,244,0.86), rgba(239,198,169,0.18));
+      overflow: hidden;
+    }
+
+    .project-visual img {
+      max-height: 260px;
+      width: auto;
+      filter: drop-shadow(0 14px 26px rgba(0,0,0,0.16));
+    }
+
+    .feature-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(201, 111, 59, 0.10);
     }
 
     .media-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     .media-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      min-height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      padding: 16px;
+      border-radius: var(--radius-sm);
+      min-height: 240px;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .media-box:hover img {
+      transform: scale(1.03);
     }
 
     .list {
@@ -242,27 +409,49 @@
       margin-top: 8px;
     }
 
-    .license-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 24px;
+    .video-frame {
+      width: 100%;
+      height: 460px;
+      overflow: hidden;
+      border-radius: 28px;
+      position: relative;
+      background: #000;
+    }
+
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     footer {
-      background: #e8e6dd;
-      padding: 28px 0 42px;
-      color: var(--muted);
+      background: linear-gradient(180deg, #ead7c5, #e4cfbb);
+      padding: 34px 0 42px;
+      color: #634f42;
+      border-top: 1px solid rgba(135, 94, 64, 0.10);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: end;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-note {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .footer-legal {
+      font-size: 0.92rem;
+      color: #6f5a4d;
     }
 
     code {
-      background: #efeee8;
+      background: #f3e4d8;
       padding: 2px 6px;
       border-radius: 4px;
     }
@@ -281,13 +470,40 @@
         padding: 14px 0;
         flex-direction: column;
       }
+
+      .brand {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        max-width: none;
+      }
+
+      .hero-card,
+      .project-visual,
+      .logo-panel,
+      .video-frame {
+        min-height: unset;
+        height: auto;
+      }
+
+      .video-frame {
+        height: 340px;
+      }
+
+      p {
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#home">XoRdbX Studio</a>
+      <a class="brand" href="#home">
+        <span class="brand-badge"><img src="XoRdbX-studio-logo.jpg" alt="XoRdbX studio logo"></span>
+        <span>XoRdbX Studio</span>
+      </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">Studio</a>
         <a href="#games">Games</a>
@@ -300,12 +516,11 @@
 
   <section class="hero" id="home">
     <div class="container hero-grid">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow">Independent Game Studio</p>
         <h1>XoRdbX Studio</h1>
         <p class="lead">
-          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences.
-		  The studio’s first project, <strong>LexiGrid - Letter swap quest</strong>, is a fast-paced word puzzle game where players swap letters on a grid to build words before time runs out.		  
+          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences. Its first project, <strong>LexiGrid – Letter Swap Quest</strong>, is a fast-paced word puzzle game where players swap letters on a grid to build words before time runs out.
         </p>
         <div class="actions">
           <a class="btn primary" href="#games">See the game</a>
@@ -324,21 +539,25 @@
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Studio</p>
+        <h2>A creative journey turned into a studio</h2>
       </div>
       <div class="two-col">
         <div class="card">
           <h3>What is XoRdbX?</h3>
           <p>
-			XoRdbX is an independent game studio born from a creative hobby.
-			The project started as a way to explore game development, combining artistic creativity and programming. Over time, it evolved into a small studio dedicated to building accessible and engaging games.
-			Its first title, LexiGrid - Letter swap quest, reflects this philosophy through clear gameplay mechanics and thoughtful design.		
+            XoRdbX is an independent game studio born from a creative hobby. The project began as a way to explore game development while combining artistic expression and programming. Over time, it evolved into a small studio dedicated to building accessible and engaging games.
+          </p>
+          <p>
+            Its first title, <strong>LexiGrid – Letter Swap Quest</strong>, reflects this philosophy through clear gameplay mechanics and thoughtful design.
           </p>
         </div>
         <div class="card">
           <h3>Current catalog</h3>
           <p>
-            The studio currently features its first title: <strong>LexiGrid - Letter swap quest</strong>
-			Future projects will expand the catalog while continuing to explore accessible and engaging gameplay ideas. 
+            The studio currently features its first title: <strong>LexiGrid – Letter Swap Quest</strong>.
+          </p>
+          <p>
+            Future projects will expand the catalog while continuing to explore accessible, readable, and engaging gameplay ideas.
           </p>
         </div>
       </div>
@@ -351,24 +570,23 @@
         <p class="eyebrow">Games</p>
         <h2>Current project</h2>
         <p class="lead">
-          LexiGrid is the first game released by XoRdbX Studio.
-		  It is a word puzzle game built around a dynamic grid where players swap letters to form words under time pressure.
+          LexiGrid is the first game released by XoRdbX Studio. It is a word puzzle game built around a dynamic grid where players swap letters to form words under time pressure.
         </p>
       </div>
       <div class="two-col">
         <div class="card">
           <h3>LexiGrid</h3>
           <p>
-			LexiGrid – Letter Swap Quest is a fast-paced word puzzle game for Android.
-			Players swap letters on a 10×10 grid to create words before time runs out. Each stage introduces new layouts and challenges, encouraging quick thinking and strategic choices.
-			Obstacles such as slime and ice tiles add an extra layer of puzzle solving, while each successful word rewards players with additional time to keep the game going.
-			Designed to stimulate vocabulary and cognitive skills, LexiGrid combines learning and entertainment in a visually clean and accessible experience.          
-		  </p>
+            <strong>LexiGrid – Letter Swap Quest</strong> is a fast-paced word puzzle game for Android. Players swap letters on a 10×10 grid to create words before time runs out. Each stage introduces new layouts and challenges, encouraging quick thinking and strategic choices.
+          </p>
+          <p>
+            Obstacles such as slime and ice tiles add another layer of puzzle-solving, while each successful word rewards players with additional time to keep the game going. Designed to stimulate vocabulary and cognitive skills, LexiGrid combines learning and entertainment in a visually clean and accessible experience.
+          </p>
           <p>
             <a href="#play">View the LexiGrid section</a>
           </p>
         </div>
-        <div class="card" style="display:flex;align-items:center;justify-content:center;min-height:220px;">
+        <div class="card project-visual">
           <img src="LexiGrid.png" alt="LexiGrid cover art">
         </div>
       </div>
@@ -382,17 +600,17 @@
         <h2>Core game highlights</h2>
       </div>
       <div class="cards">
-        <article class="card">
+        <article class="card feature-card">
           <h3>Grid-based word gameplay</h3>
           <p>Create words directly on the board by swapping letters and spotting the best combinations.</p>
         </article>
-        <article class="card">
+        <article class="card feature-card">
           <h3>Quick puzzle sessions</h3>
           <p>Short, dynamic rounds designed for mobile play and easy pick-up sessions.</p>
         </article>
-        <article class="card">
+        <article class="card feature-card">
           <h3>Strategic challenges</h3>
-          <p>Overcome obstacles like slime and ice tiles or more that change how you approach each puzzle.</p>
+          <p>Overcome obstacles like slime and ice tiles that change how you approach each puzzle.</p>
         </article>
       </div>
     </div>
@@ -402,13 +620,15 @@
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Media</p>
-		<h2>Screenshots from LexiGrid showing gameplay and level progression.</h2>
+        <h2>LexiGrid in motion</h2>
+        <p class="lead">
+          Screenshots from LexiGrid showing gameplay, visual atmosphere, and level progression.
+        </p>
       </div>
-
       <div class="media-grid">
-        <div class="media-box"><img src="5.png" alt="stage 5"></div>
-        <div class="media-box"><img src="7.png" alt="stage 7"></div>
-        <div class="media-box"><img src="8.png" alt="stage 8"></div>
+        <div class="media-box"><img src="5.png" alt="LexiGrid screenshot stage 5"></div>
+        <div class="media-box"><img src="7.png" alt="LexiGrid screenshot stage 7"></div>
+        <div class="media-box"><img src="8.png" alt="LexiGrid screenshot stage 8"></div>
       </div>
     </div>
   </section>
@@ -422,9 +642,12 @@
       <div class="two-col">
         <div class="card">
           <h3>Download link</h3>
-		  LexiGrid is available on 
-		  <a href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid">Google Play</a>.
-		  Download the game and challenge your vocabulary and puzzle-solving skills.
+          <p>
+            LexiGrid is available on <a href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid">Google Play</a>.
+          </p>
+          <p>
+            Download the game and challenge your vocabulary and puzzle-solving skills.
+          </p>
         </div>
         <div class="card">
           <h3>Project summary</h3>
@@ -447,8 +670,7 @@
       </div>
       <div class="license-box">
         <p>
-          This project includes code originally created by <strong>Batuhan YİĞİT</strong>
-          and distributed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.
+          This project includes code originally created by <strong>Batuhan YİĞİT</strong> and distributed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.
         </p>
         <p>Copyright (c) 2023 Batuhan YİĞİT</p>
       </div>
@@ -461,15 +683,12 @@
         <p class="eyebrow">Studio</p>
         <h2>Produced by XoRdbX</h2>
         <p class="lead">
-		  LexiGrid is developed and published by XoRdbX Studio.
-		  The short clip below presents the studio identity used at the beginning of the game.
+          LexiGrid is developed and published by XoRdbX Studio. The short clip below presents the studio identity used at the beginning of the game.
         </p>
       </div>
-
-      <div>
-        <div class="card">
-		<div style="width:100%;height:420px;overflow:hidden;border:1px solid var(--border);background:#000;position:relative;">
-            <video controls style="width:100%;height:100%;object-fit:cover;object-position:center;">
+      <div class="card">
+        <div class="video-frame">
+          <video controls>
             <source src="XoRdbX-studio.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -480,13 +699,15 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>
-        <strong>XoRdbX Studio - Independent game studio.</strong><br/>
-		Official website presenting the studio and its current project, LexiGrid.		
-		<i>Immatriculée au Registre du commerce et des Sociétés de Valenciennes sous le numéro 994 303 238 RCS Valenciennes.
-		"EI" et TVA non applicable art. 293B-TGI.
-		Adhésion à un organisme de médiation.
-		Copyright (c) 2026</i>
+      <div class="footer-note">
+        <strong>XoRdbX Studio — Independent game studio.</strong><br />
+        Official website presenting the studio and its current project, LexiGrid.
+      </div>
+      <div class="footer-legal">
+        Registered with the Valenciennes Trade and Companies Register under number 994 303 238 RCS Valenciennes.<br />
+        Sole proprietorship (EI). VAT not applicable under Article 293 B of the French General Tax Code.<br />
+        Member of a consumer mediation organization.<br />
+        Copyright © 2026 XoRdbX Studio
       </div>
     </div>
   </footer>
