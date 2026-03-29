@@ -7,13 +7,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-  
     gtag('config', 'G-DFW2DQNXRT');
-  </script>  
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>XoRdbX Studio</title>
-  <meta name="description" content="XoRdbX is an independent game studio. Discover the studio identity and LexiGrid, its current word puzzle game project." />
+  <title>XoRdbX Studio — Independent Game Studio</title>
+  <meta name="description" content="XoRdbX is an independent game studio. Discover the studio identity and LexiGrid, its first word puzzle game for Android. Swap letters, form words, beat the clock." />
   <style>
     :root {
       --bg: #f7efe4;
@@ -47,29 +46,19 @@
       background:
         radial-gradient(circle at top left, rgba(255,255,255,0.72), transparent 30%),
         linear-gradient(180deg, #fbf4eb 0%, var(--bg) 36%, #f3e3d3 100%);
-      line-height: 1.65;
+      line-height: 1.75;
     }
 
-    a {
-      color: var(--accent-dark);
-      transition: color 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--accent);
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-      height: auto;
-    }
+    a { color: var(--accent-dark); transition: color 0.2s ease; }
+    a:hover { color: var(--accent); }
+    img { max-width: 100%; display: block; height: auto; }
 
     .container {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
     }
 
+    /* TOPBAR */
     .topbar {
       position: sticky;
       top: 0;
@@ -96,11 +85,11 @@
       text-decoration: none;
       color: var(--text);
       letter-spacing: 0.01em;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .brand-badge {
-      width: 42px;
-      height: 42px;
+      width: 42px; height: 42px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent-soft), #fff4eb);
       border: 1px solid rgba(135, 94, 64, 0.12);
@@ -112,27 +101,20 @@
       flex-shrink: 0;
     }
 
-    .brand-badge img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .brand-badge img { width: 100%; height: 100%; object-fit: cover; }
 
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .nav { display: flex; flex-wrap: wrap; gap: 6px; }
 
     .nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 700;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 10px 14px;
+      padding: 9px 13px;
       border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .nav a:hover {
@@ -140,14 +122,14 @@
       color: var(--accent-dark);
     }
 
+    /* HERO */
     .hero {
       position: relative;
       overflow: hidden;
       padding: 34px 0 20px;
     }
 
-    .hero::before,
-    .hero::after {
+    .hero::before, .hero::after {
       content: "";
       position: absolute;
       border-radius: 999px;
@@ -156,19 +138,15 @@
     }
 
     .hero::before {
-      width: 280px;
-      height: 280px;
+      width: 280px; height: 280px;
       background: rgba(201, 111, 59, 0.11);
-      top: -80px;
-      left: -60px;
+      top: -80px; left: -60px;
     }
 
     .hero::after {
-      width: 380px;
-      height: 380px;
+      width: 380px; height: 380px;
       background: rgba(255, 220, 190, 0.48);
-      right: -100px;
-      top: 20px;
+      right: -100px; top: 20px;
     }
 
     .hero-grid {
@@ -193,31 +171,21 @@
       color: var(--accent-dark);
       background: rgba(201, 111, 59, 0.11);
       border: 1px solid rgba(201, 111, 59, 0.14);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     h1, h2, h3 {
       line-height: 1.12;
       margin: 0 0 16px;
       letter-spacing: -0.02em;
+      s: Arial, Helvetica, sans-serif;
     }
 
-    h1 {
-      font-size: clamp(2.8rem, 5vw, 4.8rem);
-      max-width: 10ch;
-    }
+    h1 { font-size: clamp(2.8rem, 5vw, 4.8rem); max-width: 10ch; }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    h3 { font-size: 1.15rem; }
 
-    h2 {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-    }
-
-    h3 {
-      font-size: 1.12rem;
-    }
-
-    p {
-      margin: 0 0 16px;
-      text-align: justify;
-    }
+    p { margin: 0 0 16px; text-align: justify; }
 
     .lead {
       font-size: 1.12rem;
@@ -225,9 +193,7 @@
       max-width: 720px;
     }
 
-    .hero-copy .lead {
-      font-size: 1.16rem;
-    }
+    .hero-copy .lead { font-size: 1.16rem; }
 
     .actions {
       display: flex;
@@ -241,7 +207,7 @@
       align-items: center;
       justify-content: center;
       min-height: 48px;
-      padding: 12px 20px;
+      padding: 12px 22px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 700;
@@ -249,13 +215,12 @@
       background: rgba(255, 250, 244, 0.86);
       color: var(--text);
       box-shadow: var(--shadow-soft);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 28px rgba(91, 56, 33, 0.12);
-    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(91, 56, 33, 0.12); }
 
     .btn.primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-dark));
@@ -263,11 +228,7 @@
       border-color: transparent;
     }
 
-    .hero-card,
-    .card,
-    .license-box,
-    .media-box,
-    .video-frame {
+    .hero-card, .card, .license-box, .media-box, .video-frame {
       background: var(--surface);
       border: 1px solid var(--border);
       box-shadow: var(--shadow);
@@ -309,10 +270,8 @@
       filter: drop-shadow(0 10px 28px rgba(0,0,0,0.16));
     }
 
-    .section {
-      position: relative;
-      padding: 76px 0;
-    }
+    /* SECTIONS */
+    .section { position: relative; padding: 76px 0; }
 
     .section.alt {
       background: linear-gradient(180deg, rgba(255, 250, 244, 0.62), rgba(255, 250, 244, 0.44));
@@ -320,40 +279,16 @@
       border-bottom: 1px solid rgba(135, 94, 64, 0.08);
     }
 
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 30px;
-    }
+    .section-header { max-width: 760px; margin-bottom: 36px; }
+    .section-header h2 { max-width: 14ch; }
 
-    .section-header h2 {
-      max-width: 12ch;
-    }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 26px;
-    }
+    .card, .license-box { border-radius: var(--radius); padding: 32px; }
+    .card h3, .license-box h3 { margin-bottom: 14px; }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card,
-    .license-box {
-      border-radius: var(--radius);
-      padding: 28px;
-    }
-
-    .card h3,
-    .license-box h3 {
-      margin-bottom: 14px;
-    }
-
-    .project-visual,
-    .logo-panel {
+    .project-visual, .logo-panel {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -369,27 +304,19 @@
       filter: drop-shadow(0 14px 26px rgba(0,0,0,0.16));
     }
 
-    .feature-card {
-      position: relative;
-      overflow: hidden;
-    }
+    .feature-card { position: relative; overflow: hidden; }
 
     .feature-card::before {
       content: "";
       position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 44px;
-      height: 44px;
+      top: 18px; right: 18px;
+      width: 44px; height: 44px;
       border-radius: 50%;
       background: rgba(201, 111, 59, 0.10);
     }
 
-    .media-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    /* MEDIA */
+    .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
     .media-box {
       border-radius: var(--radius-sm);
@@ -399,25 +326,17 @@
     }
 
     .media-box img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       transition: transform 0.35s ease;
     }
 
-    .media-box:hover img {
-      transform: scale(1.03);
-    }
+    .media-box:hover img { transform: scale(1.03); }
 
-    .list {
-      padding-left: 20px;
-      margin: 0;
-    }
+    .list { padding-left: 20px; margin: 0; }
+    .list li + li { margin-top: 10px; }
 
-    .list li + li {
-      margin-top: 8px;
-    }
-
+    /* VIDEO */
     .video-frame {
       width: 100%;
       height: 460px;
@@ -428,13 +347,79 @@
     }
 
     .video-frame video {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       object-position: center;
       display: block;
     }
 
+    /* LANG TABS */
+    .lang-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .lang-tab {
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+
+    .lang-tab.active {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px 28px;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .contact-icon {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(201, 111, 59, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-item h3 { margin: 0 0 6px; font-size: 1rem; }
+    .contact-item p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+
+    /* PRIVACY */
+    .privacy-content { max-width: 860px; }
+    .privacy-content h3 { margin-top: 28px; margin-bottom: 10px; color: var(--accent-dark); }
+    .privacy-content p, .privacy-content li { font-size: 0.97rem; line-height: 1.8; }
+    .privacy-content ul { padding-left: 22px; }
+    .privacy-content ul li + li { margin-top: 6px; }
+
+    /* FOOTER */
     footer {
       background: linear-gradient(180deg, #ead7c5, #e4cfbb);
       padding: 34px 0 42px;
@@ -466,11 +451,7 @@
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
-      .two-col,
-      .cards,
-      .media-grid,
-      .footer-grid {
+      .hero-grid, .two-col, .cards, .media-grid, .footer-grid, .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -480,33 +461,20 @@
         flex-direction: column;
       }
 
-      .brand {
-        font-size: 1.2rem;
-      }
+      h1 { max-width: none; }
 
-      h1 {
-        max-width: none;
-      }
-
-      .hero-card,
-      .project-visual,
-      .logo-panel,
-      .video-frame {
+      .hero-card, .project-visual, .logo-panel, .video-frame {
         min-height: unset;
         height: auto;
       }
 
-      .video-frame {
-        height: 340px;
-      }
-
-      p {
-        text-align: left;
-      }
+      .video-frame { height: 340px; }
+      p { text-align: left; }
     }
   </style>
 </head>
 <body>
+
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#home">
@@ -519,21 +487,24 @@
         <a href="#media">Media</a>
         <a href="#play">LexiGrid</a>
         <a href="#license">License</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy-policy.html">Privacy</a>
       </nav>
     </div>
   </header>
 
+  <!-- ═══ HERO ═══ -->
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="hero-copy">
         <p class="eyebrow">Independent Game Studio</p>
         <h1>XoRdbX Studio</h1>
         <p class="lead">
-          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences. Its first project, <strong>LexiGrid – Letter Swap Quest</strong>, is a fast-paced word puzzle game where players swap letters on a grid to build words before time runs out.
+          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences. Its first project, <strong>LexiGrid – Letter Swap Quest</strong>, is a fast-paced word puzzle game where players swap letters on a grid to build words before time runs out. Available now on Android.
         </p>
         <div class="actions">
-          <a class="btn primary" href="#games">See the game</a>
-          <a class="btn" href="#studio">Studio identity</a>
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid" target="_blank" rel="noopener">Download on Google Play</a>
+          <a class="btn" href="#games">Discover the game</a>
         </div>
       </div>
       <div class="hero-card">
@@ -544,65 +515,144 @@
     </div>
   </section>
 
+  <!-- ═══ ABOUT ═══ -->
   <section class="section alt" id="about">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Studio</p>
         <h2>A creative journey turned into a studio</h2>
+        <p class="lead">XoRdbX Studio was born from the desire to combine programming, design, and gameplay into meaningful interactive experiences.</p>
       </div>
-      <div class="two-col">
-        <div class="card">
-          <h3>What is XoRdbX?</h3>
-          <p>
-            XoRdbX is an independent game studio born from a creative hobby. The project began as a way to explore game development while combining artistic expression and programming. Over time, it evolved into a small studio dedicated to building accessible and engaging games.
-          </p>
-          <p>
-            Its first title, <strong>LexiGrid – Letter Swap Quest</strong>, reflects this philosophy through clear gameplay mechanics and thoughtful design.
-          </p>
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('about', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('about', 'fr')">Français</button>
+      </div>
+
+      <div id="about-en" class="lang-content active">
+        <div class="two-col">
+          <div class="card">
+            <h3>What is XoRdbX?</h3>
+            <p>
+              XoRdbX is an independent game studio founded in the Valenciennes area of northern France. The project started as a personal creative endeavor — a way to explore the world of mobile game development through a combination of artistic sensibility and technical passion.
+            </p>
+            <p>
+              From the very first lines of code to publishing on the Google Play Store, every aspect of the studio's first game was conceived, designed, and built by a single developer. This solo-developed approach means that each creative decision reflects a genuine personal vision rather than the compromises of a larger team.
+            </p>
+            <p>
+              XoRdbX is registered as a sole proprietorship (EI) with the Valenciennes Trade and Companies Register, demonstrating a commitment to operating professionally and transparently within the French legal framework.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Philosophy &amp; Vision</h3>
+            <p>
+              The studio's philosophy centers on one key principle: <strong>accessible fun</strong>. Games should be easy to pick up but rewarding to master. LexiGrid embodies this through intuitive touch controls, clean visual design, and progressively challenging levels.
+            </p>
+            <p>
+              XoRdbX believes that word games are more than entertainment — they stimulate the mind, expand vocabulary, and sharpen cognitive skills. By combining this educational dimension with genuine fun and appealing aesthetics, the studio aims to create games that players return to day after day.
+            </p>
+            <p>
+              Future projects will continue to explore the intersection of puzzle mechanics, language, and elegant design. The catalog will grow, always guided by the same standards of quality and clarity that define LexiGrid.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Current catalog</h3>
-          <p>
-            The studio currently features its first title: <strong>LexiGrid – Letter Swap Quest</strong>.
-          </p>
-          <p>
-            Future projects will expand the catalog while continuing to explore accessible, readable, and engaging gameplay ideas.
-          </p>
+      </div>
+
+      <div id="about-fr" class="lang-content">
+        <div class="two-col">
+          <div class="card">
+            <h3>Qu'est-ce que XoRdbX ?</h3>
+            <p>
+              XoRdbX est un studio de jeu vidéo indépendant fondé dans la région de Valenciennes, dans le nord de la France. Le projet est né d'une démarche créative personnelle — une façon d'explorer le monde du développement de jeux mobiles en combinant sensibilité artistique et passion technique.
+            </p>
+            <p>
+              Des premières lignes de code à la publication sur le Google Play Store, chaque aspect du premier jeu du studio a été conçu, designé et développé par un seul développeur. Cette approche en solo signifie que chaque décision créative reflète une vision personnelle sincère plutôt que les compromis d'une grande équipe.
+            </p>
+            <p>
+              XoRdbX est enregistrée en tant qu'entreprise individuelle (EI) au Registre du Commerce et des Sociétés de Valenciennes, témoignant d'un engagement à exercer de manière professionnelle et transparente dans le cadre légal français.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Philosophie &amp; Vision</h3>
+            <p>
+              La philosophie du studio repose sur un principe fondamental : <strong>le plaisir accessible</strong>. Les jeux doivent être faciles à prendre en main mais gratifiants à maîtriser. LexiGrid incarne cette vision grâce à des contrôles tactiles intuitifs, un design visuel épuré et des niveaux progressivement plus exigeants.
+            </p>
+            <p>
+              XoRdbX est convaincu que les jeux de mots sont bien plus que du divertissement — ils stimulent l'esprit, enrichissent le vocabulaire et aiguisent les capacités cognitives. En combinant cette dimension éducative avec un vrai plaisir de jeu et une esthétique soignée, le studio ambitionne de créer des jeux auxquels les joueurs reviennent chaque jour.
+            </p>
+            <p>
+              Les projets futurs continueront d'explorer la rencontre entre mécanique de puzzle, langage et design élégant. Le catalogue s'étoffera, toujours guidé par les mêmes exigences de qualité et de clarté qui définissent LexiGrid.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ GAMES ═══ -->
   <section class="section" id="games">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Games</p>
-        <h2>Current project</h2>
-        <p class="lead">
-          LexiGrid is the first game released by XoRdbX Studio. It is a word puzzle game built around a dynamic grid where players swap letters to form words under time pressure.
-        </p>
+        <h2>LexiGrid – Letter Swap Quest</h2>
+        <p class="lead">The first game released by XoRdbX Studio — a word puzzle experience built around speed, strategy, and the love of language.</p>
       </div>
-      <div class="two-col">
-        <div class="card">
-          <h3>LexiGrid</h3>
-          <p>
-            <strong>LexiGrid – Letter Swap Quest</strong> is a fast-paced word puzzle game for Android. Players swap letters on a 10×10 grid to create words before time runs out. Each stage introduces new layouts and challenges, encouraging quick thinking and strategic choices.
-          </p>
-          <p>
-            Obstacles such as slime and ice tiles add another layer of puzzle-solving, while each successful word rewards players with additional time to keep the game going. Designed to stimulate vocabulary and cognitive skills, LexiGrid combines learning and entertainment in a visually clean and accessible experience.
-          </p>
-          <p>
-            <a href="#play">View the LexiGrid section</a>
-          </p>
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('games', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('games', 'fr')">Français</button>
+      </div>
+
+      <div id="games-en" class="lang-content active">
+        <div class="two-col">
+          <div class="card">
+            <h3>What is LexiGrid?</h3>
+            <p>
+              <strong>LexiGrid – Letter Swap Quest</strong> is a fast-paced word puzzle game for Android. The core mechanic is elegantly simple: players swap adjacent letters on a dynamic 10×10 grid to form valid words before the clock runs out.
+            </p>
+            <p>
+              Each word you complete rewards you with bonus time, keeping the tension alive and encouraging you to push further. The game progressively increases in complexity — new grid layouts, tighter time limits, and special obstacle tiles like <strong>slime</strong> and <strong>ice</strong> keep every session fresh and stimulating.
+            </p>
+            <p>
+              LexiGrid is designed to be picked up in seconds but mastered over dozens of sessions. Whether you have two minutes on the commute or an hour at home, the game adapts to your rhythm and rewards your vocabulary skills.
+            </p>
+            <p>
+              Beyond entertainment, LexiGrid actively trains your brain. Searching for words under time pressure sharpens reaction speed, improves pattern recognition, and enriches your vocabulary — all while having fun.
+            </p>
+          </div>
+          <div class="card project-visual">
+            <img src="LexiGrid.png" alt="LexiGrid cover art">
+          </div>
         </div>
-        <div class="card project-visual">
-          <img src="LexiGrid.png" alt="LexiGrid cover art">
+      </div>
+
+      <div id="games-fr" class="lang-content">
+        <div class="two-col">
+          <div class="card">
+            <h3>C'est quoi LexiGrid ?</h3>
+            <p>
+              <strong>LexiGrid – Letter Swap Quest</strong> est un jeu de puzzle de mots au rythme soutenu, disponible sur Android. La mécanique principale est d'une simplicité élégante : les joueurs échangent des lettres adjacentes sur une grille dynamique de 10×10 cases pour former des mots valides avant que le temps ne s'écoule.
+            </p>
+            <p>
+              Chaque mot complété vous rapporte du temps supplémentaire, maintenant la tension et vous encourageant à aller encore plus loin. Le jeu gagne progressivement en complexité — nouvelles dispositions de grilles, temps plus serrés, et tuiles obstacles spéciales comme le <strong>slime</strong> et la <strong>glace</strong> — pour que chaque session reste fraîche et stimulante.
+            </p>
+            <p>
+              LexiGrid se prend en main en quelques secondes mais se maîtrise au fil de dizaines de parties. Que vous ayez deux minutes dans les transports ou une heure chez vous, le jeu s'adapte à votre rythme et récompense vos compétences linguistiques.
+            </p>
+            <p>
+              Au-delà du divertissement, LexiGrid entraîne activement votre cerveau. Chercher des mots sous la pression du temps affûte la vitesse de réaction, améliore la reconnaissance de schémas et enrichit le vocabulaire — tout en s'amusant.
+            </p>
+          </div>
+          <div class="card project-visual">
+            <img src="LexiGrid.png" alt="LexiGrid cover art">
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="features">
+  <!-- ═══ FEATURES ═══ -->
+  <section class="section alt" id="features">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">LexiGrid</p>
@@ -611,88 +661,119 @@
       <div class="cards">
         <article class="card feature-card">
           <h3>Grid-based word gameplay</h3>
-          <p>Create words directly on the board by swapping letters and spotting the best combinations.</p>
+          <p>Create words directly on the board by swapping adjacent letters. Scan the grid, spot opportunities, and build the longest words you can to maximize your bonus time. The larger the word, the bigger the reward.</p>
         </article>
         <article class="card feature-card">
           <h3>Quick puzzle sessions</h3>
-          <p>Short, dynamic rounds designed for mobile play and easy pick-up sessions.</p>
+          <p>Short, dynamic rounds designed for mobile play — perfect for commutes, breaks, or any spare moment. Sessions are intense enough to be satisfying and short enough to always leave you wanting one more round.</p>
         </article>
         <article class="card feature-card">
-          <h3>Strategic challenges</h3>
-          <p>Overcome obstacles like slime and ice tiles that change how you approach each puzzle.</p>
+          <h3>Strategic obstacles</h3>
+          <p>Slime tiles block letter swaps and must be cleared strategically. Ice tiles freeze letters in place until you work around them. These mechanics turn each level into a genuine puzzle that rewards careful planning alongside quick thinking.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Progressive difficulty</h3>
+          <p>Each stage introduces new layouts, configurations, and challenges. Early levels ease you in, while later stages demand both a rich vocabulary and sharp strategic thinking to complete before time expires.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Brain training</h3>
+          <p>LexiGrid actively trains vocabulary, pattern recognition, and decision-making under pressure. Regular play helps expand your word bank and sharpens the mental agility needed to spot words in complex, shifting letter arrangements.</p>
+        </article>
+        <article class="card feature-card">
+          <h3>Clean, accessible design</h3>
+          <p>The visual design prioritizes clarity and readability. Large, legible letters, high-contrast tile states, and a clean color palette mean you always know exactly what is on the board and what actions are available.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="media">
+  <!-- ═══ MEDIA ═══ -->
+  <section class="section" id="media">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Media</p>
-        <h2>LexiGrid in motion</h2>
+        <h2>LexiGrid in action</h2>
         <p class="lead">
-          Screenshots from LexiGrid showing gameplay, visual atmosphere, and level progression.
+          Screenshots from LexiGrid showing gameplay, visual atmosphere, and level progression. Each stage offers a distinct layout and challenge.
         </p>
       </div>
       <div class="media-grid">
-        <div class="media-box"><img src="5.png" alt="LexiGrid screenshot stage 5"></div>
-        <div class="media-box"><img src="7.png" alt="LexiGrid screenshot stage 7"></div>
-        <div class="media-box"><img src="8.png" alt="LexiGrid screenshot stage 8"></div>
+        <div class="media-box"><img src="5.png" alt="LexiGrid gameplay screenshot — stage 5 grid with letter tiles"></div>
+        <div class="media-box"><img src="7.png" alt="LexiGrid gameplay screenshot — stage 7 with obstacle tiles"></div>
+        <div class="media-box"><img src="8.png" alt="LexiGrid gameplay screenshot — stage 8 advanced layout"></div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="play">
+  <!-- ═══ PLAY ═══ -->
+  <section class="section alt" id="play">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">LexiGrid</p>
-        <h2>Where to find the game</h2>
+        <h2>Download &amp; play</h2>
+        <p class="lead">LexiGrid is available for free on Android. Challenge your vocabulary, beat the clock, and climb the difficulty ladder.</p>
       </div>
       <div class="two-col">
         <div class="card">
-          <h3>Download link</h3>
+          <h3>Available on Google Play</h3>
           <p>
-            LexiGrid is available on <a href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid">Google Play</a>.
+            LexiGrid is available now on <a href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid" target="_blank" rel="noopener">Google Play</a>. Download it for free and start swapping letters immediately. No account required — just install, tap, and play.
           </p>
           <p>
-            Download the game and challenge your vocabulary and puzzle-solving skills.
+            The game receives regular updates adding new stages, fixing bugs, and refining the gameplay experience based on player feedback.
           </p>
+          <div class="actions">
+            <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid" target="_blank" rel="noopener">Get it on Google Play</a>
+            <a class="btn" href="https://www.reddit.com/r/lexigrid" target="_blank" rel="noopener">💬 r/lexigrid on Reddit</a>
+          </div>
         </div>
         <div class="card">
-          <h3>Project summary</h3>
+          <h3>Project details</h3>
           <ul class="list">
-            <li>Platform: Mobile (Android)</li>
-            <li>Genre: Word / Puzzle</li>
-            <li>Status: Released</li>
-            <li>Studio: XoRdbX</li>
+            <li><strong>Platform:</strong> Mobile — Android</li>
+            <li><strong>Genre:</strong> Word Puzzle</li>
+            <li><strong>Status:</strong> Released &amp; actively maintained</li>
+            <li><strong>Studio:</strong> XoRdbX (sole developer)</li>
+            <li><strong>Price:</strong> Free to download</li>
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Package:</strong> com.xordbx.lexigrid</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section alt" id="license">
+  <!-- ═══ LICENSE ═══ -->
+  <section class="section" id="license">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">License</p>
         <h2>Third-party license information</h2>
+        <p class="lead">XoRdbX Studio is committed to transparency regarding all third-party components used in its products.</p>
       </div>
       <div class="license-box">
         <p>
-          This project includes code originally created by <strong>Batuhan YİĞİT</strong> and distributed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.
+          This project includes code originally created by <strong>Batuhan YİĞİT</strong> and distributed under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT License</a>.
         </p>
         <p>Copyright (c) 2023 Batuhan YİĞİT</p>
+        <p>
+          Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the conditions of the MIT License.
+        </p>
+        <p style="margin:0; color: var(--muted); font-size: 0.93rem;">
+          All original content, game design, artwork, and code not covered by the above license are the exclusive intellectual property of XoRdbX Studio. Copyright © 2026 XoRdbX Studio. All rights reserved.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="studio">
+  <!-- ═══ STUDIO VIDEO ═══ -->
+  <section class="section alt" id="studio">
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Studio</p>
-        <h2>Produced by XoRdbX</h2>
+        <h2>The XoRdbX identity</h2>
         <p class="lead">
-          LexiGrid is developed and published by XoRdbX Studio. The short clip below presents the studio identity used at the beginning of the game.
+          Every XoRdbX game opens with a short studio introduction — a visual signature that communicates the studio's identity and sets the tone before gameplay begins. The clip below is the intro sequence used at the launch of LexiGrid.
         </p>
       </div>
       <div class="card">
@@ -706,19 +787,237 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container footer-grid">
-      <div class="footer-note">
-        <strong>XoRdbX Studio — Independent game studio.</strong><br />
-        Official website presenting the studio and its current project, LexiGrid.
+  <!-- ═══ CONTACT ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p class="lead">Questions about the game, partnership inquiries, press requests, or feedback — feel free to reach out. XoRdbX Studio reads every message.</p>
       </div>
-      <div class="footer-legal">
-        Registered with the Valenciennes Trade and Companies Register under number 994 303 238 RCS Valenciennes.<br />
-        Sole proprietorship (EI). VAT not applicable under Article 293 B of the French General Tax Code.<br />
-        Member of a consumer mediation organization.<br />
-        Copyright © 2026 XoRdbX Studio
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('contact', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('contact', 'fr')">Français</button>
+      </div>
+
+      <div id="contact-en" class="lang-content active">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h3>General enquiries</h3>
+              <p>For any question about XoRdbX Studio, LexiGrid, or future projects, contact us at: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🎮</div>
+            <div>
+              <h3>Game support</h3>
+              <p>Experiencing a bug or technical issue in LexiGrid? Report it at: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a> — we aim to respond within 48 hours.</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📰</div>
+            <div>
+              <h3>Press &amp; media</h3>
+              <p>Journalists and content creators interested in covering LexiGrid or XoRdbX Studio are welcome to request a press kit or review access at: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🤝</div>
+            <div>
+              <h3>Partnerships</h3>
+              <p>Interested in collaborating or exploring a business opportunity? Reach out at: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a> with a brief description of your proposal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 26px;">
+          <h3>Legal address</h3>
+          <p>XoRdbX Studio — Sole proprietorship (Entreprise Individuelle)<br>
+          Valenciennes area, Hauts-de-France, France<br>
+          RCS Valenciennes — SIREN 994 303 238<br>
+          VAT not applicable — Article 293 B of the French General Tax Code</p>
+        </div>
+      </div>
+
+      <div id="contact-fr" class="lang-content">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h3>Renseignements généraux</h3>
+              <p>Pour toute question concernant XoRdbX Studio, LexiGrid ou les projets à venir, contactez-nous à : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🎮</div>
+            <div>
+              <h3>Support technique</h3>
+              <p>Vous rencontrez un bug ou un problème technique dans LexiGrid ? Signalez-le à : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a> — nous répondons sous 48 heures.</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📰</div>
+            <div>
+              <h3>Presse &amp; médias</h3>
+              <p>Journalistes et créateurs de contenu souhaitant couvrir LexiGrid ou XoRdbX Studio peuvent demander un kit presse ou un accès test à : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">🤝</div>
+            <div>
+              <h3>Partenariats</h3>
+              <p>Intéressé par une collaboration ou une opportunité commerciale ? Écrivez-nous à : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a> avec une description de votre proposition.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 26px;">
+          <h3>Adresse légale</h3>
+          <p>XoRdbX Studio — Entreprise Individuelle (EI)<br>
+          Région de Valenciennes, Hauts-de-France, France<br>
+          RCS Valenciennes — SIREN 994 303 238<br>
+          TVA non applicable — Article 293 B du Code Général des Impôts</p>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Privacy Policy is on privacy-policy.html -->
+  <section class="section alt" id="privacy" style="display:none">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Legal</p>
+        <h2>Privacy Policy</h2>
+        <p class="lead">XoRdbX Studio is committed to protecting your privacy. This policy explains what data is collected, how it is used, and your rights.</p>
+      </div>
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('privacy', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('privacy', 'fr')">Français</button>
+      </div>
+
+      <div id="privacy-en" class="lang-content active">
+        <div class="card privacy-content">
+          <p><em>Last updated: March 2026</em></p>
+
+          <h3>1. Who we are</h3>
+          <p>This privacy policy applies to the website <strong>xordbx.github.io</strong> and the mobile application <strong>LexiGrid – Letter Swap Quest</strong> (Android), both operated by XoRdbX Studio, a sole proprietorship registered in France (RCS Valenciennes, SIREN 994 303 238).</p>
+
+          <h3>2. Data collected by the website</h3>
+          <p>This website uses <strong>Google Analytics</strong> (via Google Tag Manager) to collect anonymous usage statistics, including pages visited, session duration, and approximate geographic location based on IP address. This data is aggregated and does not identify individual users. No personal data such as names, email addresses, or payment information is collected through this website.</p>
+
+          <h3>3. Data collected by the LexiGrid application</h3>
+          <p>The LexiGrid mobile application may collect the following data through third-party SDKs:</p>
+          <ul>
+            <li><strong>Advertising data</strong> — If LexiGrid displays advertisements, Google AdMob may collect advertising identifiers (GAID) and usage data to serve relevant ads. You can reset or opt out of personalised advertising in your Android device settings under Privacy &gt; Ads.</li>
+            <li><strong>Crash and performance data</strong> — Anonymous crash reports and performance metrics may be collected to improve stability.</li>
+            <li><strong>Gameplay data</strong> — Anonymous session data (levels played, time spent) may be collected to improve game balancing. This data cannot be linked to an individual user.</li>
+          </ul>
+          <p>LexiGrid does not require account creation and does not collect names, email addresses, or payment information.</p>
+
+          <h3>4. Cookies</h3>
+          <p>This website uses cookies set by Google Analytics to track anonymous usage. By continuing to use this website, you consent to the use of these cookies. You may disable cookies at any time through your browser settings.</p>
+
+          <h3>5. Data sharing</h3>
+          <p>XoRdbX Studio does not sell your data to third parties. Data may be shared with the following service providers solely for the purposes described above: Google LLC (Google Analytics, AdMob). These providers operate under their own privacy policies and are subject to GDPR compliance obligations.</p>
+
+          <h3>6. Your rights (GDPR)</h3>
+          <p>If you are a resident of the European Union, you have the right to access, rectify, and request deletion of any personal data held about you. To exercise these rights, contact us at: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a>. You also have the right to lodge a complaint with the French data protection authority (CNIL) at <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+          <h3>7. Data retention</h3>
+          <p>Anonymous analytics data is retained for a maximum of 26 months as per Google Analytics default settings. No personal data is retained by XoRdbX Studio beyond what is strictly necessary to respond to a direct enquiry.</p>
+
+          <h3>8. Children's privacy</h3>
+          <p>LexiGrid is not specifically directed at children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has submitted personal data, please contact us immediately at <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a>.</p>
+
+          <h3>9. Changes to this policy</h3>
+          <p>This privacy policy may be updated from time to time. The date at the top of this page indicates when it was last revised. Continued use of our website or application constitutes acceptance of any changes.</p>
+
+          <h3>10. Contact</h3>
+          <p>For any privacy-related enquiry: <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+        </div>
+      </div>
+
+      <div id="privacy-fr" class="lang-content">
+        <div class="card privacy-content">
+          <p><em>Dernière mise à jour : mars 2026</em></p>
+
+          <h3>1. Qui sommes-nous</h3>
+          <p>Cette politique de confidentialité s'applique au site <strong>xordbx.github.io</strong> et à l'application mobile <strong>LexiGrid – Letter Swap Quest</strong> (Android), tous deux exploités par XoRdbX Studio, entreprise individuelle (EI) immatriculée en France (RCS Valenciennes, SIREN 994 303 238).</p>
+
+          <h3>2. Données collectées par le site web</h3>
+          <p>Ce site utilise <strong>Google Analytics</strong> (via Google Tag Manager) pour collecter des statistiques d'utilisation anonymes, notamment les pages visitées, la durée des sessions et la localisation géographique approximative basée sur l'adresse IP. Ces données sont agrégées et ne permettent pas d'identifier individuellement les utilisateurs. Aucune donnée personnelle telle que nom, adresse e-mail ou informations de paiement n'est collectée via ce site.</p>
+
+          <h3>3. Données collectées par l'application LexiGrid</h3>
+          <p>L'application mobile LexiGrid peut collecter les données suivantes via des SDK tiers :</p>
+          <ul>
+            <li><strong>Données publicitaires</strong> — Si LexiGrid affiche des publicités, Google AdMob peut collecter des identifiants publicitaires (GAID) et des données d'utilisation pour diffuser des annonces pertinentes. Vous pouvez réinitialiser ou désactiver la publicité personnalisée dans les paramètres de votre appareil Android sous Confidentialité &gt; Annonces.</li>
+            <li><strong>Données de crash et de performance</strong> — Des rapports de crash anonymes peuvent être collectés pour améliorer la stabilité du jeu.</li>
+            <li><strong>Données de gameplay</strong> — Des données de session anonymes (niveaux joués, temps passé) peuvent être collectées pour améliorer l'équilibrage du jeu. Ces données ne peuvent pas être liées à un utilisateur individuel.</li>
+          </ul>
+          <p>LexiGrid ne nécessite pas de création de compte et ne collecte pas de noms, adresses e-mail ou informations de paiement.</p>
+
+          <h3>4. Cookies</h3>
+          <p>Ce site utilise des cookies déposés par Google Analytics pour mesurer l'audience de manière anonyme. En continuant à utiliser ce site, vous acceptez l'utilisation de ces cookies. Vous pouvez les désactiver à tout moment dans les paramètres de votre navigateur.</p>
+
+          <h3>5. Partage des données</h3>
+          <p>XoRdbX Studio ne vend pas vos données à des tiers. Les données peuvent être partagées avec les prestataires de services suivants, uniquement aux fins décrites ci-dessus : Google LLC (Google Analytics, AdMob). Ces prestataires opèrent selon leurs propres politiques de confidentialité et sont soumis aux obligations de conformité RGPD.</p>
+
+          <h3>6. Vos droits (RGPD)</h3>
+          <p>Si vous résidez dans l'Union européenne, vous disposez du droit d'accès, de rectification et de suppression de toute donnée personnelle vous concernant. Pour exercer ces droits, contactez-nous à : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a>. Vous disposez également du droit de déposer une plainte auprès de la CNIL à l'adresse <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+
+          <h3>7. Durée de conservation</h3>
+          <p>Les données analytiques anonymes sont conservées 26 mois maximum conformément aux paramètres par défaut de Google Analytics. Aucune donnée personnelle n'est conservée par XoRdbX Studio au-delà de ce qui est strictement nécessaire pour répondre à une demande directe.</p>
+
+          <h3>8. Protection des mineurs</h3>
+          <p>LexiGrid ne s'adresse pas spécifiquement aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles auprès des enfants. Si vous pensez qu'un enfant a soumis des données personnelles, contactez-nous immédiatement à <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a>.</p>
+
+          <h3>9. Modifications de cette politique</h3>
+          <p>Cette politique de confidentialité peut être mise à jour périodiquement. La date en haut de cette page indique la date de dernière révision. L'utilisation continue de notre site ou de notre application vaut acceptation des modifications.</p>
+
+          <h3>10. Contact</h3>
+          <p>Pour toute question relative à la confidentialité : <a href="#" class="prot-email" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;">[email protected]</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+		<strong>XoRdbX Studio — Independent game studio.</strong><br />
+		Official website presenting the studio and its current project, LexiGrid.
+    </div>
+    <div class="footer-legal">
+      Registered with the Valenciennes Trade and Companies Register under number 994 303 238 RCS Valenciennes.<br />
+      Sole proprietorship (EI). VAT not applicable under Article 293 B of the French General Tax Code.<br />
+      Member of a consumer mediation organization.<br /><br />
+      Copyright © 2026 XoRdbX Studio — All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchLang(section, lang) {
+    const enEl = document.getElementById(section + '-en');
+    const frEl = document.getElementById(section + '-fr');
+    if (!enEl || !frEl) return;
+
+    enEl.classList.toggle('active', lang === 'en');
+    frEl.classList.toggle('active', lang === 'fr');
+
+    // Update tab buttons: find the .lang-tabs sibling just before the en element
+    let tabs = enEl.previousElementSibling;
+    while (tabs && !tabs.classList.contains('lang-tabs')) {
+      tabs = tabs.previousElementSibling;
+    }
+    if (tabs) {
+      tabs.querySelectorAll('.lang-tab').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'fr'));
+      });
+    }
+  }
+</script>
+
 </body>
 </html>
