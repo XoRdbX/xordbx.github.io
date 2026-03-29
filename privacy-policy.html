@@ -1,109 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFW2DQNXRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DFW2DQNXRT');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - LexiGrid</title>
+  <title>Privacy Policy — LexiGrid / XoRdbX Studio</title>
+  <meta name="description" content="Privacy Policy for LexiGrid and XoRdbX Studio. Learn how we handle your data, your GDPR rights, and how to manage your consent preferences." />
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; max-width: 900px; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #2980b9; }
-    ul { margin-top: 0.5rem; }
-    .small { font-size: 0.95rem; color: #555; }
-    .block { background:#f8fbff; border:1px solid #e3eefb; padding:14px 16px; border-radius:8px; }
+    :root {
+      --bg: #f7efe4;
+      --surface: rgba(255, 250, 244, 0.86);
+      --text: #2f241f;
+      --muted: #6f5a4d;
+      --accent: #c96f3b;
+      --accent-dark: #a95629;
+      --accent-soft: #efc6a9;
+      --border: rgba(135, 94, 64, 0.18);
+      --shadow: 0 18px 42px rgba(91, 56, 33, 0.10);
+      --shadow-soft: 0 10px 24px rgba(91, 56, 33, 0.07);
+      --radius: 20px;
+      --max: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #fbf4eb 0%, var(--bg) 36%, #f3e3d3 100%);
+      line-height: 1.8;
+    }
+
+    a { color: var(--accent-dark); transition: color 0.2s; }
+    a:hover { color: var(--accent); }
+
+    /* TOPBAR */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 249, 242, 0.88);
+      border-bottom: 1px solid rgba(135, 94, 64, 0.12);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 72px;
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .brand-badge {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-soft), #fff4eb);
+      border: 1px solid rgba(135, 94, 64, 0.12);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; flex-shrink: 0;
+    }
+
+    .brand-badge img { width: 100%; height: 100%; object-fit: cover; }
+
+    .back-link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--accent-dark);
+      background: rgba(201, 111, 59, 0.08);
+    }
+
+    /* HERO */
+    .page-hero {
+      padding: 56px 0 40px;
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      background: rgba(201, 111, 59, 0.11);
+      border: 1px solid rgba(201, 111, 59, 0.14);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .updated {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* LANG TABS */
+    .lang-tabs {
+      display: flex;
+      gap: 10px;
+      margin: 28px 0 32px;
+    }
+
+    .lang-tab {
+      padding: 9px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .lang-tab.active {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+
+    /* CONTENT */
+    .content {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+
+    .summary-box {
+      background: rgba(201, 111, 59, 0.07);
+      border: 1px solid rgba(201, 111, 59, 0.20);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 36px;
+    }
+
+    .summary-box p { margin: 0; font-size: 0.97rem; color: var(--muted); }
+    .summary-box strong { color: var(--text); }
+
+    .policy-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .policy-section h2 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.15rem;
+      margin: 0 0 14px;
+      color: var(--accent-dark);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .policy-section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(201, 111, 59, 0.12);
+      font-size: 0.8rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      color: var(--accent-dark);
+      flex-shrink: 0;
+    }
+
+    .policy-section p { margin: 0 0 12px; font-size: 0.96rem; }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section ul {
+      margin: 8px 0 12px;
+      padding-left: 22px;
+    }
+
+    .policy-section ul li { font-size: 0.96rem; margin-bottom: 8px; }
+    .policy-section ul li:last-child { margin-bottom: 0; }
+
+    code {
+      background: rgba(201, 111, 59, 0.10);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 0.88em;
+      color: var(--accent-dark);
+    }
+
+    .contact-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 111, 59, 0.09);
+      border: 1px solid rgba(201, 111, 59, 0.18);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-decoration: none;
+      margin-top: 6px;
+    }
+
+    .contact-highlight:hover { background: rgba(201, 111, 59, 0.16); }
+
+    /* FOOTER */
+    footer {
+      background: linear-gradient(180deg, #ead7c5, #e4cfbb);
+      padding: 28px 0 36px;
+      color: #634f42;
+      border-top: 1px solid rgba(135, 94, 64, 0.10);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    footer a { color: var(--accent-dark); }
+
+    @media (max-width: 600px) {
+      .policy-section { padding: 20px 20px; }
+      .topbar-inner { padding: 12px 0; flex-wrap: wrap; }
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> October 16, 2025</p>
 
-  <p><strong>LexiGrid</strong> (the “App”) is a mobile game developed by <strong>XoRdbX</strong>. This Privacy Policy explains what data we process, why, and how you can exercise your rights—especially regarding consent under the GDPR and Google’s User Messaging Platform (UMP).</p>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-badge"><img src="XoRdbX-studio-logo.jpg" alt="XoRdbX logo"></span>
+        <span>XoRdbX Studio</span>
+      </a>
+      <a class="back-link" href="index.html">← Back to site</a>
+    </div>
+  </header>
 
-  <h2>1. Summary</h2>
-  <div class="block small">
-    <p>We use <strong>Google AdMob</strong> to show ads and <strong>Firebase Analytics</strong> to understand how the game is used. In the European Economic Area (EEA/UK), we ask for your consent via <strong>Google UMP</strong> before collecting analytics or showing personalized ads. If you refuse consent, analytics are disabled and only non-personalized ads are shown.</p>
+  <div class="page-hero">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: October 16, 2025 &nbsp;·&nbsp; Developer: XoRdbX &nbsp;·&nbsp; App: LexiGrid</p>
   </div>
 
-  <h2>2. Data We Process</h2>
-  <p>The App does not collect names, emails, or other directly identifying data. Through our partners, the following categories may be processed:</p>
-  <ul>
-    <li><strong>Analytics (Firebase Analytics)</strong>: app instance identifiers, session data (session start/length), device info (model, OS version, language), country/region, in-game events (e.g., level start/complete, boosters used), crash/quality signals.</li>
-    <li><strong>Advertising (Google AdMob)</strong>: Advertising ID, ad impressions and clicks, basic device information; if consent is granted, ads may be personalized using Google’s signals.</li>
-  </ul>
-  <p class="small">We configure the App so that analytics collection can be fully disabled until consent is given (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), and AdMob respects your UMP choices (personalized vs. non-personalized ads).</p>
+  <div class="content">
 
-  <h2>3. Purposes of Processing</h2>
-  <ul>
-    <li><strong>Provide and improve the game</strong> (measure features, balance gameplay, fix bugs and performance issues).</li>
-    <li><strong>Show ads</strong> to fund the App (personalized only with consent; otherwise non-personalized).</li>
-    <li><strong>Security and abuse prevention</strong> (aggregate signals to protect services).</li>
-  </ul>
+    <div class="lang-tabs">
+      <button class="lang-tab active" onclick="switchLang('en')">English</button>
+      <button class="lang-tab" onclick="switchLang('fr')">Français</button>
+    </div>
 
-  <h2>4. Legal Bases (GDPR)</h2>
-  <ul>
-    <li><strong>Consent</strong> (Art. 6(1)(a)): analytics measurement and personalized advertising in the EEA/UK are based on your explicit consent collected via UMP.</li>
-    <li><strong>Legitimate interests</strong> (Art. 6(1)(f)): essential operations such as delivering non-personalized ads and ensuring the App’s security and basic functionality.</li>
-  </ul>
+    <!-- ══════════ ENGLISH ══════════ -->
+    <div id="lang-en" class="lang-content active">
 
-  <h2>5. Consent & Privacy Options (UMP)</h2>
-  <p>On first launch (and periodically as required), users in the EEA/UK see a UMP consent form to:</p>
-  <ul>
-    <li>Allow or refuse analytics measurement (Firebase Analytics).</li>
-    <li>Choose between personalized or non-personalized ads (AdMob).</li>
-  </ul>
-  <p>You can change your choice at any time from the App’s <strong>“Privacy / Ad Options”</strong> screen (which reopens the UMP privacy options form). If you withdraw consent, analytics collection is disabled going forward and ads become non-personalized.</p>
+      <div class="summary-box">
+        <p>We use <strong>Google AdMob</strong> to show ads and <strong>Firebase Analytics</strong> to understand how the game is used. In the European Economic Area (EEA/UK), we ask for your consent via <strong>Google UMP</strong> before collecting analytics or showing personalized ads. If you refuse consent, analytics are disabled and only non-personalized ads are shown.</p>
+      </div>
 
-  <h2>6. Data Sharing & Processors</h2>
-  <p>We do not sell or rent your data. We share data with our service providers solely to operate the App:</p>
-  <ul>
-    <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase & privacy</a></li>
-    <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">EEA/UK consent</a></li>
-  </ul>
-  <p>Google acts as our data processor for these services under Google’s data processing terms.</p>
+      <div class="policy-section">
+        <h2><span class="num">1</span> Who We Are</h2>
+        <p><strong>LexiGrid</strong> (the "App") is a mobile word puzzle game developed and published by <strong>XoRdbX Studio</strong>, a sole proprietorship (Entreprise Individuelle) registered in France under RCS Valenciennes, SIREN 994 303 238. This Privacy Policy explains what data we process, why, and how you can exercise your rights — especially regarding consent under the GDPR and Google's User Messaging Platform (UMP).</p>
+      </div>
 
-  <h2>7. International Transfers</h2>
-  <p>Data may be processed outside your country (e.g., in the United States). Google implements safeguards such as the <strong>Standard Contractual Clauses (SCCs)</strong> to comply with GDPR requirements for international transfers.</p>
+      <div class="policy-section">
+        <h2><span class="num">2</span> Data We Process</h2>
+        <p>The App does not collect names, emails, or other directly identifying data. Through our partners, the following categories may be processed:</p>
+        <ul>
+          <li><strong>Analytics (Firebase Analytics):</strong> app instance identifiers, session data (session start/length), device info (model, OS version, language), country/region, in-game events (e.g., level start/complete, boosters used), crash and quality signals.</li>
+          <li><strong>Advertising (Google AdMob):</strong> Advertising ID, ad impressions and clicks, basic device information. If consent is granted, ads may be personalized using Google's signals.</li>
+        </ul>
+        <p>We configure the App so that analytics collection can be fully disabled until consent is given (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), and AdMob respects your UMP choices (personalized vs. non-personalized ads).</p>
+      </div>
 
-  <h2>8. Retention</h2>
-  <p>Analytics data is retained according to Firebase settings (typically 14–26 months) and then deleted or aggregated. Ad-related logs are retained according to Google’s policies.</p>
+      <div class="policy-section">
+        <h2><span class="num">3</span> Purposes of Processing</h2>
+        <ul>
+          <li><strong>Provide and improve the game</strong> — measure features, balance gameplay, fix bugs and performance issues.</li>
+          <li><strong>Show ads</strong> — to fund the App (personalized only with consent; otherwise non-personalized).</li>
+          <li><strong>Security and abuse prevention</strong> — aggregate signals to protect services.</li>
+        </ul>
+      </div>
 
-  <h2>9. Your Rights (GDPR)</h2>
-  <p>Subject to legal limits, you have the right to:</p>
-  <ul>
-    <li>Access and receive a copy of your personal data</li>
-    <li>Request rectification or erasure (“right to be forgotten”)</li>
-    <li>Restrict or object to processing (including analytics)</li>
-    <li>Data portability</li>
-    <li>Withdraw consent at any time (without affecting prior lawful processing)</li>
-  </ul>
-  <p>Within the App, you can withdraw consent via the <strong>Privacy / Ad Options</strong> screen. You may also request deletion/reset of analytics identifiers; we can trigger <code>ResetAnalyticsData()</code> in response to your request.</p>
+      <div class="policy-section">
+        <h2><span class="num">4</span> Legal Bases (GDPR)</h2>
+        <ul>
+          <li><strong>Consent</strong> (Art. 6(1)(a)): analytics measurement and personalized advertising in the EEA/UK are based on your explicit consent collected via UMP.</li>
+          <li><strong>Legitimate interests</strong> (Art. 6(1)(f)): essential operations such as delivering non-personalized ads and ensuring the App's security and basic functionality.</li>
+        </ul>
+      </div>
 
-  <h2>10. Children's Privacy</h2>
-  <p>LexiGrid is designed for a general audience and is not specifically directed at children.</p>
+      <div class="policy-section">
+        <h2><span class="num">5</span> Consent &amp; Privacy Options (UMP)</h2>
+        <p>On first launch (and periodically as required), users in the EEA/UK see a UMP consent form to:</p>
+        <ul>
+          <li>Allow or refuse analytics measurement (Firebase Analytics).</li>
+          <li>Choose between personalized or non-personalized ads (AdMob).</li>
+        </ul>
+        <p>You can change your choice at any time from the App's <strong>"Privacy / Ad Options"</strong> screen (which reopens the UMP privacy options form). If you withdraw consent, analytics collection is disabled going forward and ads become non-personalized.</p>
+      </div>
 
-  <p>The App does not intentionally collect or process personal information from minors. If you believe that a minor has provided personal data through the App without appropriate consent, please contact us so that we can promptly delete such information.</p>
+      <div class="policy-section">
+        <h2><span class="num">6</span> Data Sharing &amp; Processors</h2>
+        <p>We do not sell or rent your data. We share data with our service providers solely to operate the App:</p>
+        <ul>
+          <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase &amp; privacy</a></li>
+          <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">EEA/UK consent</a></li>
+        </ul>
+        <p>Google acts as our data processor for these services under Google's data processing terms.</p>
+      </div>
 
-  <p>Use of the App by minors should always take place under the supervision and consent of a parent or legal guardian. The developer of LexiGrid cannot be held responsible for any use of the App by minors without such supervision or consent.</p>
+      <div class="policy-section">
+        <h2><span class="num">7</span> International Transfers</h2>
+        <p>Data may be processed outside your country (e.g., in the United States). Google implements safeguards such as the <strong>Standard Contractual Clauses (SCCs)</strong> to comply with GDPR requirements for international transfers.</p>
+      </div>
 
-  <p>Parents and guardians are encouraged to monitor the digital activities of those under their care and to help ensure a safe and appropriate experience.</p>
+      <div class="policy-section">
+        <h2><span class="num">8</span> Retention</h2>
+        <p>Analytics data is retained according to Firebase settings (typically 14–26 months) and then deleted or aggregated. Ad-related logs are retained according to Google's policies.</p>
+      </div>
 
-  <h2>11. Security</h2>
-  <p>We apply technical and organizational measures to protect data. However, no method of transmission or storage is completely secure.</p>
+      <div class="policy-section">
+        <h2><span class="num">9</span> Your Rights (GDPR)</h2>
+        <p>Subject to legal limits, you have the right to:</p>
+        <ul>
+          <li>Access and receive a copy of your personal data</li>
+          <li>Request rectification or erasure ("right to be forgotten")</li>
+          <li>Restrict or object to processing (including analytics)</li>
+          <li>Data portability</li>
+          <li>Withdraw consent at any time (without affecting prior lawful processing)</li>
+        </ul>
+        <p>Within the App, you can withdraw consent via the <strong>Privacy / Ad Options</strong> screen. You may also request deletion/reset of analytics identifiers; we can trigger <code>ResetAnalyticsData()</code> in response to your request.</p>
+      </div>
 
-  <h2>12. Your Choices & Controls</h2>
-  <ul>
-    <li><strong>In-app privacy options</strong>: open the App’s <em>Privacy / Ad Options</em> to change consent at any time (UMP).</li>
-    <li><strong>Device settings</strong>: you can reset your Advertising ID and limit ad personalization in your OS settings.</li>
-    <li><strong>Opt-out of analytics</strong>: refuse analytics in the UMP form; we will disable Firebase Analytics collection.</li>
-  </ul>
+      <div class="policy-section">
+        <h2><span class="num">10</span> Children's Privacy</h2>
+        <p>LexiGrid is designed for a general audience and is not specifically directed at children under the age of 13. The App does not intentionally collect or process personal information from minors.</p>
+        <p>If you believe that a minor has provided personal data through the App without appropriate consent, please contact us so that we can promptly delete such information. Use of the App by minors should always take place under the supervision and consent of a parent or legal guardian.</p>
+        <p>Parents and guardians are encouraged to monitor the digital activities of those under their care and to help ensure a safe and appropriate experience.</p>
+      </div>
 
-  <h2>13. Contact</h2>
-  <p>If you have questions or want to exercise your rights, contact:</p>
-  <p><strong>Email:</strong> <a href="mailto:xordbx76@gmail.com">xordbx76@gmail.com</a></p>
+      <div class="policy-section">
+        <h2><span class="num">11</span> Security</h2>
+        <p>We apply technical and organizational measures to protect data against unauthorized access, alteration, or loss. However, no method of transmission or storage over the internet is completely secure, and we cannot guarantee absolute security.</p>
+      </div>
 
-  <h2>14. Changes to this Policy</h2>
-  <p>We may update this policy from time to time. We will update the “Last updated” date above and, where appropriate, notify you in the App.</p>
+      <div class="policy-section">
+        <h2><span class="num">12</span> Your Choices &amp; Controls</h2>
+        <ul>
+          <li><strong>In-app privacy options:</strong> open the App's <em>Privacy / Ad Options</em> screen to change your consent at any time (UMP).</li>
+          <li><strong>Device settings:</strong> you can reset your Advertising ID and limit ad personalization in your Android device settings under Privacy &gt; Ads.</li>
+          <li><strong>Opt-out of analytics:</strong> refuse analytics in the UMP form and Firebase Analytics collection will be disabled.</li>
+        </ul>
+      </div>
 
-  <p class="small">Developer: XordBX • App: LexiGrid</p>
+      <div class="policy-section">
+        <h2><span class="num">13</span> Contact</h2>
+        <p>If you have questions or want to exercise your rights, contact us:</p>
+        <a class="contact-highlight" href="#" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120">✉ [email protected]</a>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">14</span> Changes to This Policy</h2>
+        <p>We may update this policy from time to time. We will update the "Last updated" date at the top of this page and, where appropriate, notify you within the App. Continued use of the App following any update constitutes acceptance of the revised policy.</p>
+      </div>
+
+    </div><!-- /lang-en -->
+
+    <!-- ══════════ FRANÇAIS ══════════ -->
+    <div id="lang-fr" class="lang-content">
+
+      <div class="summary-box">
+        <p>Nous utilisons <strong>Google AdMob</strong> pour afficher des publicités et <strong>Firebase Analytics</strong> pour comprendre comment le jeu est utilisé. Dans l'Espace Économique Européen (EEE/UK), nous vous demandons votre consentement via <strong>Google UMP</strong> avant de collecter des données analytiques ou d'afficher des publicités personnalisées. Si vous refusez, l'analytique est désactivée et seules des publicités non personnalisées sont affichées.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">1</span> Qui sommes-nous</h2>
+        <p><strong>LexiGrid</strong> (l'« Application ») est un jeu mobile de puzzle de mots développé et publié par <strong>XoRdbX Studio</strong>, entreprise individuelle (EI) immatriculée en France au RCS Valenciennes, SIREN 994 303 238. Cette politique de confidentialité explique quelles données nous traitons, pourquoi, et comment vous pouvez exercer vos droits — notamment en ce qui concerne le consentement au titre du RGPD et de la plateforme de messagerie utilisateur de Google (UMP).</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">2</span> Données que nous traitons</h2>
+        <p>L'Application ne collecte pas de noms, d'adresses e-mail ni d'autres données directement identifiantes. Via nos partenaires, les catégories suivantes peuvent être traitées :</p>
+        <ul>
+          <li><strong>Analytique (Firebase Analytics) :</strong> identifiants d'instance d'application, données de session (début/durée), informations sur l'appareil (modèle, version OS, langue), pays/région, événements en jeu (ex. : début/fin de niveau, utilisation de boosts), signaux de crash et de qualité.</li>
+          <li><strong>Publicité (Google AdMob) :</strong> identifiant publicitaire (GAID), impressions et clics publicitaires, informations de base sur l'appareil. Si le consentement est accordé, les publicités peuvent être personnalisées à partir des signaux de Google.</li>
+        </ul>
+        <p>Nous configurons l'Application de sorte que la collecte analytique peut être entièrement désactivée jusqu'à l'obtention du consentement (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), et AdMob respecte vos choix UMP (publicités personnalisées ou non personnalisées).</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">3</span> Finalités du traitement</h2>
+        <ul>
+          <li><strong>Fournir et améliorer le jeu</strong> — mesurer les fonctionnalités, équilibrer le gameplay, corriger les bugs et les problèmes de performance.</li>
+          <li><strong>Afficher des publicités</strong> — pour financer l'Application (personnalisées uniquement avec consentement ; sinon non personnalisées).</li>
+          <li><strong>Sécurité et prévention des abus</strong> — signaux agrégés pour protéger les services.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">4</span> Bases légales (RGPD)</h2>
+        <ul>
+          <li><strong>Consentement</strong> (Art. 6(1)(a)) : la mesure analytique et la publicité personnalisée dans l'EEE/UK sont fondées sur votre consentement explicite recueilli via UMP.</li>
+          <li><strong>Intérêts légitimes</strong> (Art. 6(1)(f)) : opérations essentielles telles que la diffusion de publicités non personnalisées et la sécurité de base de l'Application.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">5</span> Consentement et options de confidentialité (UMP)</h2>
+        <p>Au premier lancement (et périodiquement selon les exigences), les utilisateurs de l'EEE/UK voient un formulaire de consentement UMP leur permettant de :</p>
+        <ul>
+          <li>Autoriser ou refuser la mesure analytique (Firebase Analytics).</li>
+          <li>Choisir entre des publicités personnalisées ou non personnalisées (AdMob).</li>
+        </ul>
+        <p>Vous pouvez modifier votre choix à tout moment depuis l'écran <strong>« Confidentialité / Options publicitaires »</strong> de l'Application (qui rouvre le formulaire de confidentialité UMP). Si vous retirez votre consentement, la collecte analytique est désactivée et les publicités deviennent non personnalisées.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">6</span> Partage des données et sous-traitants</h2>
+        <p>Nous ne vendons ni ne louons vos données. Nous partageons les données avec nos prestataires uniquement pour faire fonctionner l'Application :</p>
+        <ul>
+          <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase et confidentialité</a></li>
+          <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">Consentement EEE/UK</a></li>
+        </ul>
+        <p>Google agit en tant que sous-traitant pour ces services dans le cadre des conditions de traitement des données de Google.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">7</span> Transferts internationaux</h2>
+        <p>Les données peuvent être traitées en dehors de votre pays (par exemple aux États-Unis). Google met en œuvre des garanties telles que les <strong>Clauses Contractuelles Types (CCT)</strong> pour respecter les exigences du RGPD en matière de transferts internationaux.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">8</span> Conservation des données</h2>
+        <p>Les données analytiques sont conservées conformément aux paramètres Firebase (généralement 14 à 26 mois) puis supprimées ou agrégées. Les journaux publicitaires sont conservés selon les politiques de Google.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">9</span> Vos droits (RGPD)</h2>
+        <p>Sous réserve des limites légales, vous disposez du droit de :</p>
+        <ul>
+          <li>Accéder à vos données personnelles et en recevoir une copie</li>
+          <li>Demander leur rectification ou leur effacement (« droit à l'oubli »)</li>
+          <li>Limiter ou vous opposer au traitement (y compris analytique)</li>
+          <li>Portabilité des données</li>
+          <li>Retirer votre consentement à tout moment (sans affecter les traitements antérieurs légaux)</li>
+        </ul>
+        <p>Dans l'Application, vous pouvez retirer votre consentement via l'écran <strong>Confidentialité / Options publicitaires</strong>. Vous pouvez également demander la suppression ou la réinitialisation des identifiants analytiques ; nous pouvons déclencher <code>ResetAnalyticsData()</code> en réponse à votre demande. Vous avez également le droit de déposer une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">10</span> Protection des mineurs</h2>
+        <p>LexiGrid est conçu pour un public général et ne s'adresse pas spécifiquement aux enfants de moins de 13 ans. L'Application ne collecte pas intentionnellement de données personnelles auprès de mineurs.</p>
+        <p>Si vous pensez qu'un mineur a fourni des données personnelles via l'Application sans consentement approprié, contactez-nous afin que nous puissions supprimer ces informations dans les plus brefs délais. L'utilisation de l'Application par des mineurs doit toujours se faire sous la supervision et avec le consentement d'un parent ou tuteur légal.</p>
+        <p>Les parents et tuteurs sont encouragés à surveiller les activités numériques des personnes sous leur responsabilité.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">11</span> Sécurité</h2>
+        <p>Nous appliquons des mesures techniques et organisationnelles pour protéger les données contre tout accès non autorisé, toute altération ou toute perte. Cependant, aucune méthode de transmission ou de stockage sur Internet n'est totalement sécurisée.</p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">12</span> Vos choix et contrôles</h2>
+        <ul>
+          <li><strong>Options de confidentialité dans l'application :</strong> ouvrez l'écran <em>Confidentialité / Options publicitaires</em> pour modifier votre consentement à tout moment (UMP).</li>
+          <li><strong>Paramètres de l'appareil :</strong> vous pouvez réinitialiser votre identifiant publicitaire et limiter la personnalisation des annonces dans les paramètres Android sous Confidentialité &gt; Annonces.</li>
+          <li><strong>Désactivation de l'analytique :</strong> refusez l'analytique dans le formulaire UMP et la collecte Firebase Analytics sera désactivée.</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">13</span> Contact</h2>
+        <p>Pour toute question ou pour exercer vos droits, contactez-nous :</p>
+        <a class="contact-highlight" href="#" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120">✉ [email protected]</a>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">14</span> Modifications de cette politique</h2>
+        <p>Nous pouvons mettre à jour cette politique périodiquement. Nous mettrons à jour la date de « Dernière mise à jour » en haut de cette page et, le cas échéant, vous en informerons dans l'Application. L'utilisation continue de l'Application après toute mise à jour vaut acceptation de la politique révisée.</p>
+      </div>
+
+    </div><!-- /lang-fr -->
+
+  </div><!-- /content -->
+
+  <footer>
+    <div>
+      <strong>XoRdbX Studio</strong> — Independent Game Studio<br>
+      RCS Valenciennes — SIREN 994 303 238 · VAT not applicable (Art. 293 B CGI)<br><br>
+      <a href="index.html">← Back to xordbx.github.io</a> &nbsp;·&nbsp; Copyright © 2026 XoRdbX Studio
+    </div>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+      document.querySelectorAll('.lang-tab').forEach((btn, i) => {
+        btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'fr'));
+      });
+    }
+  </script>
+
 </body>
 </html>
