@@ -565,7 +565,7 @@
         <a href="#media">Media</a>
         <a href="#play">LexiGrid</a>
         <a href="#license">License</a>
-		<a href="#volunteers">Grilles</a>
+		<a href="#volunteers">Grids</a>
         <a href="#contact">Contact</a>
         <a href="privacy-policy.html">Privacy</a>
       </nav>
@@ -871,28 +871,104 @@
     <div class="container">
       <div class="section-header">
         <p class="eyebrow">Community</p>
-        <h2>Proposez vos grilles à thème</h2>
+        <h2>Contribute themed word grids / Contribuer aux grilles de mots à thème</h2>
         <p class="lead">
-          Le studio XoRdbX cherche des volontaires pour imaginer de nouvelles grilles de mots à thème pour LexiGrid.
+          XoRdbX Studio is looking for volunteers to help create new themed word grids for LexiGrid.
         </p>
       </div>
 
-      <div class="volunteer-layout">
-        <div class="card volunteer-image">
-          <img src="banana.png" alt="Illustration banane pour l'appel à contribution de grilles à thème">
-        </div>
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('volunteers', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('volunteers', 'fr')">Français</button>
+      </div>
 
-        <div class="volunteer-text">
-          <div class="card">
-            <h3>Participez à l'aventure LexiGrid</h3>
-            <p>
-              Le studio <strong>XoRdbX</strong> (<a href="https://xordbx.github.io/" target="_blank" rel="noopener">https://xordbx.github.io/</a>) cherche des volontaires pour créer des grilles de mots à thème !
-            </p>
-            <p>
-              <strong>Le principe :</strong> proposer un thème (exemple : <em>fruits</em>) et lister une grille 10x10 de lettres contenant le maximum de mots liés à ce thème.
-            </p>
+      <!-- ENGLISH -->
+	  <div id="volunteers-en" class="lang-content active">
+  	    <div class="volunteer-layout">
+		  <div class="card volunteer-image">
+		    <img src="banana.png" alt="Banana illustration for the themed grid volunteer call">
+		  </div>
+	
+		  <div class="volunteer-text">
+		    <div class="card">
+  			  <h3>Help create themed grids for LexiGrid</h3>
+	
+			  <p>
+			    <strong>XoRdbX Studio</strong> (<a href="https://xordbx.github.io/" target="_blank" rel="noopener">https://xordbx.github.io/</a>) is looking for volunteers to create themed word grids!
+			  </p>
+	
+			  <p>
+			    <strong>How it works:</strong> suggest a theme (for example: <em>fruits</em>) and create a 10x10 letter grid containing as many fruit names as possible.
+			  </p>
+	
+			  <div class="word-grid">A P P L E M A N G O
+	B A N A N A K I W I
+	O R A N G E P E A R
+	L E M O N P L U M X
+	C H E R R Y L I M E
+	P A P A Y A F I G X
+	G U A V A K A K I Q
+	A P R I C O T X X X
+	M E L O N G R A P E
+	C O C O N U T X X X</div>
+	
+			  <p><strong>Fruits included:</strong></p>
+	
+			  <ul class="fruit-list">
+  			    <li>APPLE</li>
+			    <li>MANGO</li>
+			    <li>BANANA</li>
+			    <li>KIWI</li>
+			    <li>ORANGE</li>
+			    <li>PEAR</li>
+			    <li>LEMON</li>
+			    <li>PLUM</li>
+			    <li>CHERRY</li>
+			    <li>LIME</li>
+			    <li>PAPAYA</li>
+			    <li>FIG</li>
+			    <li>GUAVA</li>
+			    <li>KAKI</li>
+			    <li>APRICOT</li>
+			    <li>MELON</li>
+			    <li>GRAPE</li>
+			    <li>COCONUT</li>
+			  </ul>
+	
+			  <div class="callout-note">
+			    If your theme is selected, your grid may be added to the game. And if you’d like, your name can appear in the game credits! (For that, simply contact the studio through its website.)
+			  </div>
+	
+			  <p style="margin-top: 18px;">
+  			    So feel free to submit your grid ideas!
+			  </p>
+	
+			  <p style="margin-bottom: 0;">
+			    Thank you for your help...
+			  </p>
+		    </div>
+		  </div>
+	    </div>
+	  </div>
 
-            <div class="word-grid">L I M E D A N E R G
+	  <!-- FRENCH -->
+      <div id="volunteers-fr" class="lang-content">
+        <div class="volunteer-layout">
+          <div class="card volunteer-image">
+            <img src="banana.png" alt="Illustration banane pour l'appel à contribution de grilles à thème">
+          </div>
+
+          <div class="volunteer-text">
+            <div class="card">
+              <h3>Participez à la création de grilles à thème pour LexiGrid</h3>
+              <p>
+                Le studio <strong>XoRdbX</strong> (<a href="https://xordbx.github.io/" target="_blank" rel="noopener">https://xordbx.github.io/</a>) cherche des volontaires pour créer des grilles de mots à thème !
+              </p>
+              <p>
+                <strong>Le principe :</strong> proposer un thème (exemple : <em>fruits</em>) et créer une grille 10x10 de lettres contenant le maximum de mots liés à ce thème.
+              </p>
+
+              <div class="word-grid">L I M E D A N E R G
 P A S T E Q U E K E
 B E P O I R E N S N
 M N S C A C O I E I
@@ -903,38 +979,39 @@ N M K A K I C C R N
 M Y R T I L L E O A
 A F C I T R O N V M</div>
 
-            <p><strong>Fruits présents :</strong></p>
-            <ul class="fruit-list">
-              <li>LIME</li>
-              <li>PASTEQUE</li>
-              <li>POIRE</li>
-              <li>MELON</li>
-              <li>KAKI</li>
-              <li>MYRTILLE</li>
-              <li>CITRON</li>
-              <li>DATTE</li>
-              <li>ORANGE</li>
-              <li>RAISIN</li>
-              <li>CERISE</li>
-              <li>ABRICOT</li>
-              <li>GROSEILLE</li>
-              <li>GRENADE</li>
-              <li>NECTARINE</li>
-              <li>FRAMBOISE</li>
-              <li>MANDARINE</li>
-              <li>MURE</li>
-            </ul>
+              <p><strong>Fruits présents :</strong></p>
+              <ul class="fruit-list">
+                <li>LIME</li>
+                <li>PASTEQUE</li>
+                <li>POIRE</li>
+                <li>MELON</li>
+                <li>KAKI</li>
+                <li>MYRTILLE</li>
+                <li>CITRON</li>
+                <li>DATTE</li>
+                <li>ORANGE</li>
+                <li>RAISIN</li>
+                <li>CERISE</li>
+                <li>ABRICOT</li>
+                <li>GROSEILLE</li>
+                <li>GRENADE</li>
+                <li>NECTARINE</li>
+                <li>FRAMBOISE</li>
+                <li>MANDARINE</li>
+                <li>MURE</li>
+              </ul>
 
-            <div class="callout-note">
-              Si le thème est retenu, votre grille sera reprise dans le jeu. Et si vous le souhaitez, votre nom pourra apparaître dans les crédits du jeu ! Pour cela, il suffira simplement de contacter le studio via le lien de contact en bas de page.
+              <div class="callout-note">
+                Si le thème est retenu, votre grille pourra être reprise dans le jeu. Et si vous le souhaitez, votre nom pourra apparaître dans les crédits du jeu ! Pour cela, il suffira simplement de contacter le studio via le lien de contact en bas de page.
+              </div>
+
+              <p style="margin-top: 18px;">
+                Alors, n'hésitez pas à proposer vos idées de grilles !
+              </p>
+              <p style="margin-bottom: 0;">
+                Merci de votre aide...
+              </p>
             </div>
-
-            <p style="margin-top: 18px;">
-              Alors, n'hésitez pas à proposer vos idées de grilles !
-            </p>
-            <p style="margin-bottom: 0;">
-              Merci de votre aide...
-            </p>
           </div>
         </div>
       </div>
