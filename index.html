@@ -471,6 +471,84 @@
       .video-frame { height: 340px; }
       p { text-align: left; }
     }
+
+    /* VOLUNTEERS */
+    .volunteer-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .volunteer-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(160deg, rgba(255,250,244,0.86), rgba(239,198,169,0.18));
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .volunteer-image img {
+      max-height: 420px;
+      width: auto;
+      filter: drop-shadow(0 14px 26px rgba(0,0,0,0.14));
+    }
+
+    .volunteer-text .card + .card {
+      margin-top: 20px;
+    }
+
+    .word-grid {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1rem;
+      line-height: 1.9;
+      letter-spacing: 0.18em;
+      white-space: pre;
+      overflow-x: auto;
+      background: #f8ede2;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 18px 0 20px;
+    }
+
+    .fruit-list {
+      columns: 2;
+      column-gap: 28px;
+      padding-left: 20px;
+      margin: 14px 0 0;
+    }
+
+    .fruit-list li {
+      break-inside: avoid;
+      margin-bottom: 6px;
+    }
+
+    .callout-note {
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(201, 111, 59, 0.10);
+      border: 1px solid rgba(201, 111, 59, 0.18);
+      margin-top: 18px;
+    }
+
+    @media (max-width: 900px) {
+      .volunteer-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .fruit-list {
+        columns: 1;
+      }
+
+      .word-grid {
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+      }
+    }	  
   </style>
 </head>
 <body>
@@ -487,6 +565,7 @@
         <a href="#media">Media</a>
         <a href="#play">LexiGrid</a>
         <a href="#license">License</a>
+		<a href="#volunteers">Grilles</a>
         <a href="#contact">Contact</a>
         <a href="privacy-policy.html">Privacy</a>
       </nav>
@@ -787,6 +866,81 @@
     </div>
   </section>
 
+  <!-- ═══ VOLUNTEERS ═══ -->
+  <section class="section alt" id="volunteers">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Community</p>
+        <h2>Proposez vos grilles à thème</h2>
+        <p class="lead">
+          Le studio XoRdbX cherche des volontaires pour imaginer de nouvelles grilles de mots à thème pour LexiGrid.
+        </p>
+      </div>
+
+      <div class="volunteer-layout">
+        <div class="card volunteer-image">
+          <img src="banana.png" alt="Illustration banane pour l'appel à contribution de grilles à thème">
+        </div>
+
+        <div class="volunteer-text">
+          <div class="card">
+            <h3>Participez à l'aventure LexiGrid</h3>
+            <p>
+              Le studio <strong>XoRdbX</strong> (<a href="https://xordbx.github.io/" target="_blank" rel="noopener">https://xordbx.github.io/</a>) cherche des volontaires pour créer des grilles de mots à thème !
+            </p>
+            <p>
+              <strong>Le principe :</strong> proposer un thème (exemple : <em>fruits</em>) et lister une grille 10x10 de lettres contenant le maximum de mots liés à ce thème.
+            </p>
+
+            <div class="word-grid">L I M E D A N E R G
+P A S T E Q U E K E
+B E P O I R E N S N
+M N S C A C O I E I
+E L L I E S O R G R
+L F S R R B G A N A
+O I U B M E T T A D
+N M K A K I C C R N
+M Y R T I L L E O A
+A F C I T R O N V M</div>
+
+            <p><strong>Fruits présents :</strong></p>
+            <ul class="fruit-list">
+              <li>LIME</li>
+              <li>PASTEQUE</li>
+              <li>POIRE</li>
+              <li>MELON</li>
+              <li>KAKI</li>
+              <li>MYRTILLE</li>
+              <li>CITRON</li>
+              <li>DATTE</li>
+              <li>ORANGE</li>
+              <li>RAISIN</li>
+              <li>CERISE</li>
+              <li>ABRICOT</li>
+              <li>GROSEILLE</li>
+              <li>GRENADE</li>
+              <li>NECTARINE</li>
+              <li>FRAMBOISE</li>
+              <li>MANDARINE</li>
+              <li>MURE</li>
+            </ul>
+
+            <div class="callout-note">
+              Si le thème est retenu, votre grille sera reprise dans le jeu. Et si vous le souhaitez, votre nom pourra apparaître dans les crédits du jeu ! Pour cela, il suffira simplement de contacter le studio via le lien de contact en bas de page.
+            </div>
+
+            <p style="margin-top: 18px;">
+              Alors, n'hésitez pas à proposer vos idées de grilles !
+            </p>
+            <p style="margin-bottom: 0;">
+              Merci de votre aide...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>	
+	
   <!-- ═══ CONTACT ═══ -->
   <section class="section" id="contact">
     <div class="container">
