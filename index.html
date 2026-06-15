@@ -353,6 +353,36 @@
       display: block;
     }
 
+    .lexigrid-trailer {
+      width: min(100%, 360px);
+      aspect-ratio: 9 / 16;
+      height: auto;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #000;
+    }
+
+    .lexigrid-trailer iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .lexigrid-trailer video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+      .lexigrid-trailer {
+        width: min(100%, 320px);
+        height: auto;
+      }
+    }
+
     /* LANG TABS */
     .lang-tabs {
       display: flex;
@@ -700,7 +730,16 @@
             </p>
           </div>
           <div class="card project-visual">
-            <img src="LexiGrid.png" alt="LexiGrid cover art">
+            <div class="video-frame lexigrid-trailer">
+              <iframe
+                src="https://www.youtube.com/embed/L3FMO-iz99Y"
+                title="Trailer de LexiGrid"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -723,7 +762,16 @@
             </p>
           </div>
           <div class="card project-visual">
-            <img src="LexiGrid.png" alt="LexiGrid cover art">
+            <div class="video-frame lexigrid-trailer">
+              <iframe
+                src="https://www.youtube.com/embed/L3FMO-iz99Y"
+                title="Trailer de LexiGrid"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
         </div>
       </div>
