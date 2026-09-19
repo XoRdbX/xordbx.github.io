@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFW2DQNXRT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DFW2DQNXRT');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy — LexiGrid / XoRdbX Studio</title>
-  <meta name="description" content="Privacy Policy for LexiGrid and XoRdbX Studio. Learn how we handle your data, your GDPR rights, and how to manage your consent preferences." />
+  <title>Privacy Policy — XoRdbX Studio</title>
+  <meta name="description" content="Privacy Policy for games and applications published by XoRdbX Studio." />
+
   <style>
     :root {
       --bg: #f7efe4;
@@ -31,7 +24,10 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
     body {
       margin: 0;
@@ -41,10 +37,13 @@
       line-height: 1.8;
     }
 
-    a { color: var(--accent-dark); transition: color 0.2s; }
+    a {
+      color: var(--accent-dark);
+      transition: color 0.2s;
+    }
+
     a:hover { color: var(--accent); }
 
-    /* TOPBAR */
     .topbar {
       position: sticky;
       top: 0;
@@ -76,15 +75,23 @@
     }
 
     .brand-badge {
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent-soft), #fff4eb);
       border: 1px solid rgba(135, 94, 64, 0.12);
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden; flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .brand-badge img { width: 100%; height: 100%; object-fit: cover; }
+    .brand-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     .back-link {
       font-family: Arial, Helvetica, sans-serif;
@@ -106,7 +113,6 @@
       background: rgba(201, 111, 59, 0.08);
     }
 
-    /* HERO */
     .page-hero {
       padding: 56px 0 40px;
       width: min(var(--max), calc(100% - 40px));
@@ -142,7 +148,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* LANG TABS */
     .lang-tabs {
       display: flex;
       gap: 10px;
@@ -174,7 +179,6 @@
     .lang-content { display: none; }
     .lang-content.active { display: block; }
 
-    /* CONTENT */
     .content {
       width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
@@ -189,7 +193,12 @@
       margin-bottom: 36px;
     }
 
-    .summary-box p { margin: 0; font-size: 0.97rem; color: var(--muted); }
+    .summary-box p {
+      margin: 0;
+      font-size: 0.97rem;
+      color: var(--muted);
+    }
+
     .summary-box strong { color: var(--text); }
 
     .policy-section {
@@ -216,7 +225,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px; height: 28px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       background: rgba(201, 111, 59, 0.12);
       font-size: 0.8rem;
@@ -226,7 +236,11 @@
       flex-shrink: 0;
     }
 
-    .policy-section p { margin: 0 0 12px; font-size: 0.96rem; }
+    .policy-section p {
+      margin: 0 0 12px;
+      font-size: 0.96rem;
+    }
+
     .policy-section p:last-child { margin-bottom: 0; }
 
     .policy-section ul {
@@ -234,15 +248,21 @@
       padding-left: 22px;
     }
 
-    .policy-section ul li { font-size: 0.96rem; margin-bottom: 8px; }
+    .policy-section ul li {
+      font-size: 0.96rem;
+      margin-bottom: 8px;
+    }
+
     .policy-section ul li:last-child { margin-bottom: 0; }
 
-    code {
-      background: rgba(201, 111, 59, 0.10);
-      padding: 2px 7px;
-      border-radius: 4px;
-      font-size: 0.88em;
-      color: var(--accent-dark);
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: rgba(201, 111, 59, 0.06);
+      border-radius: 8px;
+      color: var(--muted);
+      margin-top: 14px;
+      font-size: 0.92rem;
     }
 
     .contact-highlight {
@@ -261,9 +281,10 @@
       margin-top: 6px;
     }
 
-    .contact-highlight:hover { background: rgba(201, 111, 59, 0.16); }
+    .contact-highlight:hover {
+      background: rgba(201, 111, 59, 0.16);
+    }
 
-    /* FOOTER */
     footer {
       background: linear-gradient(180deg, #ead7c5, #e4cfbb);
       padding: 28px 0 36px;
@@ -276,17 +297,23 @@
     footer a { color: var(--accent-dark); }
 
     @media (max-width: 600px) {
-      .policy-section { padding: 20px 20px; }
-      .topbar-inner { padding: 12px 0; flex-wrap: wrap; }
+      .policy-section { padding: 20px; }
+      .topbar-inner {
+        padding: 12px 0;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="index.html">
-        <span class="brand-badge"><img src="XoRdbX-studio-logo.jpg" alt="XoRdbX logo"></span>
+        <span class="brand-badge">
+          <img src="XoRdbX-studio-logo.jpg" alt="XoRdbX Studio logo">
+        </span>
         <span>XoRdbX Studio</span>
       </a>
       <a class="back-link" href="index.html">← Back to site</a>
@@ -296,8 +323,14 @@
   <div class="page-hero">
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 31, 2026 &nbsp;·&nbsp; Developer: XoRdbX &nbsp;·&nbsp; App: LexiGrid</p>
-    <p>This privacy policy applies to the LexiGrid mobile application available on Google Play.</p>
+    <p class="updated">
+      Last updated: September 19, 2026 &nbsp;·&nbsp; Developer: XoRdbX Studio
+    </p>
+    <p>
+      This Privacy Policy applies to mobile games and applications published by
+      <strong>XoRdbX Studio</strong> that link to this page from their store listing
+      or from within the application.
+    </p>
   </div>
 
   <div class="content">
@@ -307,249 +340,604 @@
       <button class="lang-tab" onclick="switchLang('fr')">Français</button>
     </div>
 
-    <!-- ══════════ ENGLISH ══════════ -->
+    <!-- ==================== ENGLISH ==================== -->
     <div id="lang-en" class="lang-content active">
 
       <div class="summary-box">
-        <p>We use <strong>Google AdMob</strong> to show ads and <strong>Firebase Analytics</strong> to understand how the game is used. In the European Economic Area (EEA/UK), we ask for your consent via <strong>Google UMP</strong> before collecting analytics or showing personalized ads. If you refuse consent, analytics are disabled and only non-personalized ads are shown.</p>
+        <p>
+          <strong>XoRdbX Studio publishes several games and applications.</strong>
+          Depending on the Game, we may use Google services such as
+          <strong>Firebase</strong>, <strong>Google AdMob</strong> and
+          <strong>Google User Messaging Platform (UMP)</strong>.
+          Only the services actually integrated into the Game you use apply to you.
+        </p>
       </div>
 
       <div class="policy-section">
         <h2><span class="num">1</span> Who We Are</h2>
-        <p><strong>LexiGrid</strong> (the "App") is a mobile word puzzle game developed and published by <strong>XoRdbX Studio</strong>, a sole proprietorship (Entreprise Individuelle) registered in France under RCS Valenciennes, SIREN 994 303 238. This Privacy Policy explains what data we process, why, and how you can exercise your rights — especially regarding consent under the GDPR and Google's User Messaging Platform (UMP).</p>
+        <p>
+          The games and applications covered by this Privacy Policy (collectively, the
+          “Games”) are developed and published by <strong>XoRdbX Studio</strong>,
+          a sole proprietorship (Entreprise Individuelle) registered in France under
+          RCS Valenciennes, SIREN 994 303 238.
+        </p>
+        <p>
+          This Privacy Policy explains what information may be processed when you use
+          one of our Games, why it may be processed, which third-party services may be
+          involved, and how you can exercise your privacy rights.
+        </p>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">2</span> Data We Process</h2>
-        <p>The App does not collect names, emails, or other directly identifying data. Through our partners, the following categories may be processed:</p>
+        <h2><span class="num">2</span> Scope of This Policy</h2>
+        <p>
+          This Privacy Policy applies to any XoRdbX Studio Game that links to this page.
+          Different Games may use different features, SDKs or monetization models.
+        </p>
+        <p>
+          Therefore, a section concerning a particular service applies only when that
+          service is actually integrated into the Game you are using.
+        </p>
+        <div class="note">
+          If a Game introduces a new category of data processing or a new third-party
+          service that is not covered here, this Privacy Policy will be updated.
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">3</span> Data We May Process</h2>
+        <p>
+          Our Games do not intentionally require users to provide their name, postal
+          address, telephone number or other directly identifying information unless
+          a specific feature clearly requests it.
+        </p>
+        <p>Depending on the Game and the services it uses, the following information may be processed:</p>
         <ul>
-          <li><strong>Analytics (Firebase Analytics):</strong> app instance identifiers, session data (session start/length), device info (model, OS version, language), country/region, in-game events (e.g., level start/complete, boosters used), crash and quality signals.</li>
-          <li><strong>Advertising (Google AdMob):</strong> Advertising ID, ad impressions and clicks, basic device information. If consent is granted, ads may be personalized using Google's signals.</li>
-        </ul>
-        <p>We configure the App so that analytics collection can be fully disabled until consent is given (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), and AdMob respects your UMP choices (personalized vs. non-personalized ads).</p>
-        <p>This may include unique device identifiers associated with your device, such as Advertising ID, used for analytics and advertising purposes.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">3</span> Purposes of Processing</h2>
-        <ul>
-          <li><strong>Provide and improve the game</strong> — measure features, balance gameplay, fix bugs and performance issues.</li>
-          <li><strong>Show ads</strong> — to fund the App (personalized only with consent; otherwise non-personalized).</li>
-          <li><strong>Security and abuse prevention</strong> — aggregate signals to protect services.</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">4</span> Legal Bases (GDPR)</h2>
-        <ul>
-          <li><strong>Consent</strong> (Art. 6(1)(a)): analytics measurement and personalized advertising in the EEA/UK are based on your explicit consent collected via UMP.</li>
-          <li><strong>Legitimate interests</strong> (Art. 6(1)(f)): essential operations such as delivering non-personalized ads and ensuring the App's security and basic functionality.</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">5</span> Consent &amp; Privacy Options (UMP)</h2>
-        <p>On first launch (and periodically as required), users in the EEA/UK see a UMP consent form to:</p>
-        <ul>
-          <li>Allow or refuse analytics measurement (Firebase Analytics).</li>
-          <li>Choose between personalized or non-personalized ads (AdMob).</li>
-        </ul>
-        <p>You can change your choice at any time from the App's <strong>"Privacy / Ad Options"</strong> screen (which reopens the UMP privacy options form). If you withdraw consent, analytics collection is disabled going forward and ads become non-personalized.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">6</span> Data Sharing &amp; Processors</h2>
-        <p>We do not sell or rent your data. We share data with our service providers solely to operate the App:</p>
-        <ul>
-          <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase &amp; privacy</a></li>
-          <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy policy</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">EEA/UK consent</a></li>
-        </ul>
-        <p>Google acts as our data processor for these services under Google's data processing terms.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">7</span> International Transfers</h2>
-        <p>Data may be processed outside your country (e.g., in the United States). Google implements safeguards such as the <strong>Standard Contractual Clauses (SCCs)</strong> to comply with GDPR requirements for international transfers.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">8</span> Retention</h2>
-        <p>Analytics data is retained according to Firebase settings (typically 14–26 months) and then deleted or aggregated. Ad-related logs are retained according to Google's policies.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">9</span> Your Rights (GDPR)</h2>
-        <p>Subject to legal limits, you have the right to:</p>
-        <ul>
-          <li>Access and receive a copy of your personal data</li>
-          <li>Request rectification or erasure ("right to be forgotten")</li>
-          <li>Restrict or object to processing (including analytics)</li>
-          <li>Data portability</li>
-          <li>Withdraw consent at any time (without affecting prior lawful processing)</li>
-        </ul>
-        <p>Within the App, you can withdraw consent via the <strong>Privacy / Ad Options</strong> screen. You may also request deletion/reset of analytics identifiers; we can trigger <code>ResetAnalyticsData()</code> in response to your request.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">10</span> Children's Privacy</h2>
-        <p>LexiGrid is designed for a general audience, including children. We comply with the Google Play Families Policy.</p>
-        <p>The app does not knowingly collect personal information from children beyond what is necessary for app functionality, analytics, and non-personalized advertising. Personalized advertising is only shown where permitted and based on user consent.</p>
-        <p>If you believe that a child has provided personal data without appropriate consent, please contact us so that we can promptly delete such information. Use of the app by children should take place under the supervision of a parent or legal guardian.</p>
-        <p>Parents and guardians are encouraged to monitor the digital activities of children and to help ensure a safe experience.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">11</span> Security</h2>
-        <p>We apply technical and organizational measures to protect data against unauthorized access, alteration, or loss. However, no method of transmission or storage over the internet is completely secure, and we cannot guarantee absolute security.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">12</span> Your Choices &amp; Controls</h2>
-        <ul>
-          <li><strong>In-app privacy options:</strong> open the App's <em>Privacy / Ad Options</em> screen to change your consent at any time (UMP).</li>
-          <li><strong>Device settings:</strong> you can reset your Advertising ID and limit ad personalization in your Android device settings under Privacy &gt; Ads.</li>
-          <li><strong>Opt-out of analytics:</strong> refuse analytics in the UMP form and Firebase Analytics collection will be disabled.</li>
+          <li>
+            <strong>Firebase Analytics, where used:</strong>
+            app-instance identifiers, session information, device and operating-system
+            information, language, approximate country or region, and gameplay events
+            such as level starts, completions, feature use or other in-game interactions.
+          </li>
+          <li>
+            <strong>Firebase database services, where used:</strong>
+            technical or gameplay telemetry such as a game/grid identifier, game result,
+            words or actions played, duration, timestamps or similar non-account gameplay data.
+          </li>
+          <li>
+            <strong>Google AdMob, where used:</strong>
+            advertising-related information such as ad impressions, ad interactions,
+            basic device information and, where legally permitted, advertising identifiers.
+          </li>
+          <li>
+            <strong>Technical and security information:</strong>
+            limited diagnostic, integrity, performance or abuse-prevention information
+            necessary to operate and protect the Game and its services.
+          </li>
         </ul>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">13</span> Contact</h2>
-        <p>If you have questions or want to exercise your rights, contact us:</p>
-        <a class="contact-highlight" href="#" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120">✉ [email protected]</a>
+        <h2><span class="num">4</span> Purposes of Processing</h2>
+        <ul>
+          <li><strong>Provide the Game</strong> and its core functionality.</li>
+          <li><strong>Improve gameplay</strong>, difficulty, balancing, usability and performance.</li>
+          <li><strong>Measure usage</strong> and understand which features are used.</li>
+          <li><strong>Display advertising</strong> in Games that are supported by ads.</li>
+          <li><strong>Detect errors, fraud or abuse</strong> and protect our services.</li>
+        </ul>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">14</span> Changes to This Policy</h2>
-        <p>We may update this policy from time to time. We will update the "Last updated" date at the top of this page and, where appropriate, notify you within the App. Continued use of the App following any update constitutes acceptance of the revised policy.</p>
+        <h2><span class="num">5</span> Legal Bases and Consent</h2>
+        <p>
+          Where applicable data-protection law requires consent, we ask for consent
+          before the relevant processing begins.
+        </p>
+        <ul>
+          <li>
+            <strong>Consent:</strong> may be used for analytics storage, personalized
+            advertising and related advertising purposes where required by law.
+          </li>
+          <li>
+            <strong>Legitimate interests or service necessity:</strong> may apply to
+            limited processing needed to provide, secure, maintain or troubleshoot a Game,
+            where permitted by applicable law.
+          </li>
+        </ul>
+        <p>
+          The exact legal basis can depend on your location, the Game you use and the
+          feature or service involved.
+        </p>
       </div>
 
-    </div><!-- /lang-en -->
+      <div class="policy-section">
+        <h2><span class="num">6</span> Google UMP and Privacy Choices</h2>
+        <p>
+          Games using Google AdMob may use <strong>Google User Messaging Platform (UMP)</strong>
+          or another Google-compliant consent mechanism to present privacy choices in
+          regions where this is required.
+        </p>
+        <p>
+          Where configured, consent signals may also be used through Google consent mode
+          for advertising and analytics purposes.
+        </p>
+        <p>
+          If a Game provides a <strong>Privacy</strong>, <strong>Privacy Options</strong>
+          or <strong>Ad Options</strong> menu, you can use it to review or change the
+          choices available for that Game.
+        </p>
+      </div>
 
-    <!-- ══════════ FRANÇAIS ══════════ -->
+      <div class="policy-section">
+        <h2><span class="num">7</span> Advertising</h2>
+        <p>
+          Some Games may be free and supported by advertising through
+          <strong>Google AdMob</strong>.
+        </p>
+        <p>
+          Advertising may be personalized only where this is legally permitted and,
+          where required, after valid consent. Otherwise, contextual or non-personalized
+          advertising may be shown, subject to applicable law and platform rules.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">8</span> Data Sharing and Service Providers</h2>
+        <p>
+          We do not sell or rent personal data. Depending on the Game, information may
+          be processed by service providers used to operate the Game, including:
+        </p>
+        <ul>
+          <li>
+            <strong>Google Firebase</strong> —
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+            ·
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a>
+          </li>
+          <li>
+            <strong>Google AdMob</strong> —
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+            ·
+            <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">AdMob Privacy &amp; Consent</a>
+          </li>
+        </ul>
+        <p>
+          These providers process data according to their own terms, privacy notices
+          and applicable data-processing agreements.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">9</span> International Transfers</h2>
+        <p>
+          Some service providers may process data outside your country, including in
+          countries outside the European Economic Area. Where required, appropriate
+          safeguards such as Standard Contractual Clauses may be used for such transfers.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">10</span> Retention</h2>
+        <p>
+          Data is retained only for as long as reasonably necessary for the purposes
+          described in this Privacy Policy, subject to the retention settings and policies
+          of the relevant service provider.
+        </p>
+        <p>
+          Analytics, advertising and technical data may have different retention periods.
+          Where possible, data may also be aggregated or anonymized.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">11</span> Your Rights</h2>
+        <p>
+          Depending on your location and applicable law, you may have rights including:
+        </p>
+        <ul>
+          <li>Access to personal data concerning you</li>
+          <li>Rectification of inaccurate data</li>
+          <li>Erasure of data in applicable circumstances</li>
+          <li>Restriction of or objection to certain processing</li>
+          <li>Data portability where applicable</li>
+          <li>Withdrawal of consent at any time for future processing based on consent</li>
+        </ul>
+        <p>
+          You may also have the right to lodge a complaint with your local supervisory
+          authority. In France, the supervisory authority is the
+          <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">12</span> Children's Privacy</h2>
+        <p>
+          Some XoRdbX Studio Games may be intended for a general or mixed audience,
+          which may include children.
+        </p>
+        <p>
+          For any Game declared as targeting children on Google Play, we apply the
+          additional requirements relevant to that audience. In particular, children
+          and users of unknown age must not be served interest-based advertising or
+          remarketing, and advertising SDKs and ad formats must comply with the applicable
+          Google Play Families requirements.
+        </p>
+        <p>
+          Where a Game has a mixed audience and age-based treatment is required, an
+          appropriate neutral age-screening mechanism may be used before enabling
+          age-dependent advertising or data-processing features.
+        </p>
+        <p>
+          If you are a parent or guardian and believe that a child has provided personal
+          data inappropriately, please contact us so that we can review the situation.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">13</span> Security</h2>
+        <p>
+          We use reasonable technical and organizational measures to protect information
+          against unauthorized access, alteration, disclosure or loss. However, no
+          internet transmission or electronic storage method can be guaranteed to be
+          completely secure.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">14</span> Your Controls</h2>
+        <ul>
+          <li>
+            <strong>In-app privacy controls:</strong> where available, use the Game's
+            privacy or ad-options screen to review available consent choices.
+          </li>
+          <li>
+            <strong>Device controls:</strong> Android and other platforms provide privacy,
+            advertising and permission settings that you can manage directly.
+          </li>
+          <li>
+            <strong>Contact us:</strong> you may contact XoRdbX Studio regarding a privacy
+            request relating to one of our Games.
+          </li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">15</span> Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy or want to exercise a privacy
+          right, contact us and specify the Game concerned:
+        </p>
+        <a
+          class="contact-highlight"
+          href="#"
+          onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;"
+          data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120"
+        >✉ [email protected]</a>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">16</span> Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy when our Games, SDKs, legal obligations or
+          data-processing practices change. The “Last updated” date at the top of this
+          page will be revised whenever the policy is updated.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ==================== FRENCH ==================== -->
     <div id="lang-fr" class="lang-content">
 
       <div class="summary-box">
-        <p>Nous utilisons <strong>Google AdMob</strong> pour afficher des publicités et <strong>Firebase Analytics</strong> pour comprendre comment le jeu est utilisé. Dans l'Espace Économique Européen (EEE/UK), nous vous demandons votre consentement via <strong>Google UMP</strong> avant de collecter des données analytiques ou d'afficher des publicités personnalisées. Si vous refusez, l'analytique est désactivée et seules des publicités non personnalisées sont affichées.</p>
+        <p>
+          <strong>XoRdbX Studio publie plusieurs jeux et applications.</strong>
+          Selon le Jeu, nous pouvons utiliser des services Google tels que
+          <strong>Firebase</strong>, <strong>Google AdMob</strong> et
+          <strong>Google User Messaging Platform (UMP)</strong>.
+          Seuls les services réellement intégrés au Jeu que vous utilisez vous concernent.
+        </p>
       </div>
 
       <div class="policy-section">
         <h2><span class="num">1</span> Qui sommes-nous</h2>
-        <p><strong>LexiGrid</strong> (l'« Application ») est un jeu mobile de puzzle de mots développé et publié par <strong>XoRdbX Studio</strong>, entreprise individuelle (EI) immatriculée en France au RCS Valenciennes, SIREN 994 303 238. Cette politique de confidentialité explique quelles données nous traitons, pourquoi, et comment vous pouvez exercer vos droits — notamment en ce qui concerne le consentement au titre du RGPD et de la plateforme de messagerie utilisateur de Google (UMP).</p>
+        <p>
+          Les jeux et applications couverts par cette Politique de confidentialité
+          (collectivement, les « Jeux ») sont développés et publiés par
+          <strong>XoRdbX Studio</strong>, entreprise individuelle (EI) immatriculée en
+          France au RCS Valenciennes, SIREN 994 303 238.
+        </p>
+        <p>
+          Cette Politique explique quelles informations peuvent être traitées lorsque
+          vous utilisez l'un de nos Jeux, pourquoi elles peuvent l'être, quels services
+          tiers peuvent intervenir et comment vous pouvez exercer vos droits.
+        </p>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">2</span> Données que nous traitons</h2>
-        <p>L'Application ne collecte pas de noms, d'adresses e-mail ni d'autres données directement identifiantes. Via nos partenaires, les catégories suivantes peuvent être collectées et traitées :</p>
+        <h2><span class="num">2</span> Champ d'application</h2>
+        <p>
+          Cette Politique de confidentialité s'applique à tout Jeu XoRdbX Studio qui
+          renvoie vers cette page. Les différents Jeux peuvent utiliser des fonctionnalités,
+          SDK ou modèles de monétisation différents.
+        </p>
+        <p>
+          En conséquence, une section concernant un service particulier ne s'applique
+          que lorsque ce service est effectivement intégré au Jeu que vous utilisez.
+        </p>
+        <div class="note">
+          Si un Jeu introduit une nouvelle catégorie de traitement de données ou un
+          nouveau service tiers non couvert ici, cette Politique sera mise à jour.
+        </div>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">3</span> Données susceptibles d'être traitées</h2>
+        <p>
+          Nos Jeux ne demandent pas intentionnellement aux utilisateurs de fournir leur
+          nom, adresse postale, numéro de téléphone ou d'autres informations directement
+          identifiantes, sauf si une fonctionnalité particulière le demande clairement.
+        </p>
+        <p>Selon le Jeu et les services qu'il utilise, les informations suivantes peuvent être traitées :</p>
         <ul>
-          <li><strong>Analytique (Firebase Analytics) :</strong> identifiants d'instance d'application, données de session (début/durée), informations sur l'appareil (modèle, version du système d’exploitation, langue), pays/région, événements en jeu (ex. : début/fin de niveau, utilisation de boosts), ainsi que des signaux de crash et de qualité.</li>
-          <li><strong>Publicité (Google AdMob) :</strong> identifiants uniques de l’appareil (y compris l’identifiant publicitaire / Advertising ID), impressions et clics publicitaires, ainsi que des informations de base sur l’appareil. Si le consentement est accordé, les publicités peuvent être personnalisées à partir des signaux de Google.</li>
-        </ul>
-        <p>Cela peut inclure des identifiants uniques associés à votre appareil, tels que l’identifiant publicitaire (Advertising ID), utilisés à des fins d’analyse et de publicité.</p>
-        <p>Nous configurons l'Application de sorte que la collecte analytique puisse être entièrement désactivée jusqu'à l'obtention du consentement (via <code>FirebaseAnalytics.SetAnalyticsCollectionEnabled(false)</code>), et AdMob respecte vos choix UMP (publicités personnalisées ou non personnalisées).</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">3</span> Finalités du traitement</h2>
-        <ul>
-          <li><strong>Fournir et améliorer le jeu</strong> — mesurer les fonctionnalités, équilibrer le gameplay, corriger les bugs et les problèmes de performance.</li>
-          <li><strong>Afficher des publicités</strong> — pour financer l'Application (personnalisées uniquement avec consentement ; sinon non personnalisées).</li>
-          <li><strong>Sécurité et prévention des abus</strong> — signaux agrégés pour protéger les services.</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">4</span> Bases légales (RGPD)</h2>
-        <ul>
-          <li><strong>Consentement</strong> (Art. 6(1)(a)) : la mesure analytique et la publicité personnalisée dans l'EEE/UK sont fondées sur votre consentement explicite recueilli via UMP.</li>
-          <li><strong>Intérêts légitimes</strong> (Art. 6(1)(f)) : opérations essentielles telles que la diffusion de publicités non personnalisées et la sécurité de base de l'Application.</li>
-        </ul>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">5</span> Consentement et options de confidentialité (UMP)</h2>
-        <p>Au premier lancement (et périodiquement selon les exigences), les utilisateurs de l'EEE/UK voient un formulaire de consentement UMP leur permettant de :</p>
-        <ul>
-          <li>Autoriser ou refuser la mesure analytique (Firebase Analytics).</li>
-          <li>Choisir entre des publicités personnalisées ou non personnalisées (AdMob).</li>
-        </ul>
-        <p>Vous pouvez modifier votre choix à tout moment depuis l'écran <strong>« Confidentialité / Options publicitaires »</strong> de l'Application (qui rouvre le formulaire de confidentialité UMP). Si vous retirez votre consentement, la collecte analytique est désactivée et les publicités deviennent non personnalisées.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">6</span> Partage des données et sous-traitants</h2>
-        <p>Nous ne vendons ni ne louons vos données. Nous partageons les données avec nos prestataires uniquement pour faire fonctionner l'Application :</p>
-        <ul>
-          <li><strong>Google Firebase Analytics</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité</a> · <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase et confidentialité</a></li>
-          <li><strong>Google AdMob</strong> — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité</a> · <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">Consentement EEE/UK</a></li>
-        </ul>
-        <p>Google agit en tant que sous-traitant pour ces services dans le cadre des conditions de traitement des données de Google.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">7</span> Transferts internationaux</h2>
-        <p>Les données peuvent être traitées en dehors de votre pays (par exemple aux États-Unis). Google met en œuvre des garanties telles que les <strong>Clauses Contractuelles Types (CCT)</strong> pour respecter les exigences du RGPD en matière de transferts internationaux.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">8</span> Conservation des données</h2>
-        <p>Les données analytiques sont conservées conformément aux paramètres Firebase (généralement 14 à 26 mois) puis supprimées ou agrégées. Les journaux publicitaires sont conservés selon les politiques de Google.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">9</span> Vos droits (RGPD)</h2>
-        <p>Sous réserve des limites légales, vous disposez du droit de :</p>
-        <ul>
-          <li>Accéder à vos données personnelles et en recevoir une copie</li>
-          <li>Demander leur rectification ou leur effacement (« droit à l'oubli »)</li>
-          <li>Limiter ou vous opposer au traitement (y compris analytique)</li>
-          <li>Portabilité des données</li>
-          <li>Retirer votre consentement à tout moment (sans affecter les traitements antérieurs légaux)</li>
-        </ul>
-        <p>Dans l'Application, vous pouvez retirer votre consentement via l'écran <strong>Confidentialité / Options publicitaires</strong>. Vous pouvez également demander la suppression ou la réinitialisation des identifiants analytiques ; nous pouvons déclencher <code>ResetAnalyticsData()</code> en réponse à votre demande. Vous avez également le droit de déposer une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">10</span> Protection des mineurs</h2>
-        <p>LexiGrid est conçu pour un public général, y compris les enfants. Nous respectons le programme Famille de Google Play.</p>
-        <p>L’Application ne collecte pas sciemment de données personnelles concernant les enfants au-delà de ce qui est nécessaire au fonctionnement de l’application, à l’analyse d’usage et à l’affichage de publicités non personnalisées. Les publicités personnalisées ne sont affichées que lorsque cela est autorisé et sur la base du consentement de l’utilisateur.</p>
-        <p>Si vous pensez qu’un enfant a fourni des données personnelles sans consentement approprié, contactez-nous afin que nous puissions supprimer ces informations dans les plus brefs délais. L’utilisation de l’Application par les enfants doit se faire sous la supervision d’un parent ou d’un représentant légal.</p>
-        <p>Les parents et représentants légaux sont encouragés à surveiller les activités numériques des enfants et à contribuer à garantir une expérience sûre.</p>
-      </div>
-      
-      <div class="policy-section">
-        <h2><span class="num">11</span> Sécurité</h2>
-        <p>Nous appliquons des mesures techniques et organisationnelles pour protéger les données contre tout accès non autorisé, toute altération ou toute perte. Cependant, aucune méthode de transmission ou de stockage sur Internet n'est totalement sécurisée.</p>
-      </div>
-
-      <div class="policy-section">
-        <h2><span class="num">12</span> Vos choix et contrôles</h2>
-        <ul>
-          <li><strong>Options de confidentialité dans l'application :</strong> ouvrez l'écran <em>Confidentialité / Options publicitaires</em> pour modifier votre consentement à tout moment (UMP).</li>
-          <li><strong>Paramètres de l'appareil :</strong> vous pouvez réinitialiser votre identifiant publicitaire et limiter la personnalisation des annonces dans les paramètres Android sous Confidentialité &gt; Annonces.</li>
-          <li><strong>Désactivation de l'analytique :</strong> refusez l'analytique dans le formulaire UMP et la collecte Firebase Analytics sera désactivée.</li>
+          <li>
+            <strong>Firebase Analytics, lorsqu'il est utilisé :</strong>
+            identifiants d'instance d'application, informations de session, informations
+            sur l'appareil et le système d'exploitation, langue, pays ou région approximative,
+            ainsi que des événements de jeu tels que débuts ou fins de niveaux,
+            utilisation de fonctionnalités ou autres interactions en jeu.
+          </li>
+          <li>
+            <strong>Services de base de données Firebase, lorsqu'ils sont utilisés :</strong>
+            télémétrie technique ou de jeu telle qu'un identifiant de partie ou de grille,
+            le résultat d'une partie, les mots ou actions joués, la durée, des horodatages
+            ou d'autres données similaires ne correspondant pas à un compte utilisateur.
+          </li>
+          <li>
+            <strong>Google AdMob, lorsqu'il est utilisé :</strong>
+            informations relatives à la publicité telles que les impressions, interactions
+            publicitaires, informations de base sur l'appareil et, lorsque la loi l'autorise,
+            des identifiants publicitaires.
+          </li>
+          <li>
+            <strong>Informations techniques et de sécurité :</strong>
+            informations limitées de diagnostic, d'intégrité, de performance ou de prévention
+            des abus nécessaires au fonctionnement et à la protection du Jeu et de ses services.
+          </li>
         </ul>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">13</span> Contact</h2>
-        <p>Pour toute question ou pour exercer vos droits, contactez-nous :</p>
-        <a class="contact-highlight" href="#" onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;" data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120">✉ [email protected]</a>
+        <h2><span class="num">4</span> Finalités du traitement</h2>
+        <ul>
+          <li><strong>Fournir le Jeu</strong> et ses fonctionnalités principales.</li>
+          <li><strong>Améliorer le gameplay</strong>, la difficulté, l'équilibrage, l'ergonomie et les performances.</li>
+          <li><strong>Mesurer l'utilisation</strong> et comprendre quelles fonctionnalités sont utilisées.</li>
+          <li><strong>Afficher de la publicité</strong> dans les Jeux financés par la publicité.</li>
+          <li><strong>Détecter les erreurs, fraudes ou abus</strong> et protéger nos services.</li>
+        </ul>
       </div>
 
       <div class="policy-section">
-        <h2><span class="num">14</span> Modifications de cette politique</h2>
-        <p>Nous pouvons mettre à jour cette politique périodiquement. Nous mettrons à jour la date de « Dernière mise à jour » en haut de cette page et, le cas échéant, vous en informerons dans l'Application. L'utilisation continue de l'Application après toute mise à jour vaut acceptation de la politique révisée.</p>
+        <h2><span class="num">5</span> Bases légales et consentement</h2>
+        <p>
+          Lorsque la législation applicable exige un consentement, nous demandons ce
+          consentement avant le début du traitement concerné.
+        </p>
+        <ul>
+          <li>
+            <strong>Consentement :</strong> peut être utilisé pour le stockage analytique,
+            la publicité personnalisée et les finalités publicitaires associées lorsque
+            la loi l'exige.
+          </li>
+          <li>
+            <strong>Intérêt légitime ou nécessité du service :</strong> peut s'appliquer à
+            certains traitements limités nécessaires pour fournir, sécuriser, maintenir ou
+            dépanner un Jeu, lorsque la législation applicable le permet.
+          </li>
+        </ul>
+        <p>
+          La base légale exacte peut dépendre de votre localisation, du Jeu utilisé et du
+          service ou de la fonctionnalité concernée.
+        </p>
       </div>
 
-    </div><!-- /lang-fr -->
+      <div class="policy-section">
+        <h2><span class="num">6</span> Google UMP et choix de confidentialité</h2>
+        <p>
+          Les Jeux utilisant Google AdMob peuvent utiliser
+          <strong>Google User Messaging Platform (UMP)</strong> ou un autre mécanisme de
+          consentement conforme aux exigences de Google afin de présenter les choix de
+          confidentialité dans les régions où cela est nécessaire.
+        </p>
+        <p>
+          Lorsqu'il est configuré, le mode Consentement de Google peut également utiliser
+          ces signaux pour les finalités publicitaires et analytiques.
+        </p>
+        <p>
+          Si un Jeu propose un menu <strong>Confidentialité</strong>,
+          <strong>Options de confidentialité</strong> ou <strong>Options publicitaires</strong>,
+          vous pouvez l'utiliser pour consulter ou modifier les choix disponibles pour ce Jeu.
+        </p>
+      </div>
 
-  </div><!-- /content -->
+      <div class="policy-section">
+        <h2><span class="num">7</span> Publicité</h2>
+        <p>
+          Certains Jeux peuvent être gratuits et financés par la publicité via
+          <strong>Google AdMob</strong>.
+        </p>
+        <p>
+          La publicité personnalisée ne peut être utilisée que lorsque cela est légalement
+          autorisé et, lorsque cela est requis, après obtention d'un consentement valable.
+          Dans les autres cas, une publicité contextuelle ou non personnalisée peut être
+          affichée, sous réserve de la législation applicable et des règles de la plateforme.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">8</span> Partage des données et prestataires</h2>
+        <p>
+          Nous ne vendons ni ne louons les données personnelles. Selon le Jeu, certaines
+          informations peuvent être traitées par les prestataires utilisés pour faire
+          fonctionner le Jeu, notamment :
+        </p>
+        <ul>
+          <li>
+            <strong>Google Firebase</strong> —
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Google</a>
+            ·
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase — confidentialité et sécurité</a>
+          </li>
+          <li>
+            <strong>Google AdMob</strong> —
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité Google</a>
+            ·
+            <a href="https://support.google.com/admob/answer/9012903" target="_blank" rel="noopener">AdMob — confidentialité et consentement</a>
+          </li>
+        </ul>
+        <p>
+          Ces prestataires traitent les données conformément à leurs propres conditions,
+          politiques de confidentialité et accords de traitement applicables.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">9</span> Transferts internationaux</h2>
+        <p>
+          Certains prestataires peuvent traiter des données en dehors de votre pays,
+          notamment dans des pays situés hors de l'Espace économique européen.
+          Lorsque cela est requis, des garanties appropriées telles que les Clauses
+          Contractuelles Types peuvent être utilisées.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">10</span> Conservation</h2>
+        <p>
+          Les données sont conservées uniquement pendant la durée raisonnablement nécessaire
+          aux finalités décrites dans cette Politique, sous réserve des paramètres de
+          conservation et des politiques du prestataire concerné.
+        </p>
+        <p>
+          Les données analytiques, publicitaires et techniques peuvent avoir des durées
+          de conservation différentes. Lorsque cela est possible, les données peuvent
+          également être agrégées ou anonymisées.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">11</span> Vos droits</h2>
+        <p>
+          Selon votre lieu de résidence et la législation applicable, vous pouvez notamment
+          disposer des droits suivants :
+        </p>
+        <ul>
+          <li>Accéder aux données personnelles vous concernant</li>
+          <li>Faire rectifier des données inexactes</li>
+          <li>Demander l'effacement des données dans les cas applicables</li>
+          <li>Limiter certains traitements ou vous y opposer</li>
+          <li>Exercer votre droit à la portabilité lorsque celui-ci s'applique</li>
+          <li>Retirer votre consentement à tout moment pour les traitements futurs fondés sur ce consentement</li>
+        </ul>
+        <p>
+          Vous pouvez également avoir le droit d'introduire une réclamation auprès de
+          votre autorité de contrôle. En France, l'autorité compétente est la
+          <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">12</span> Protection des mineurs</h2>
+        <p>
+          Certains Jeux XoRdbX Studio peuvent être destinés à un public général ou mixte,
+          pouvant inclure des enfants.
+        </p>
+        <p>
+          Pour tout Jeu déclaré sur Google Play comme visant les enfants, nous appliquons
+          les exigences supplémentaires correspondant à cette audience. En particulier,
+          les enfants et les utilisateurs dont l'âge est inconnu ne doivent pas recevoir
+          de publicité basée sur leurs centres d'intérêt ni de remarketing, et les SDK et
+          formats publicitaires doivent respecter les exigences applicables du programme
+          Famille de Google Play.
+        </p>
+        <p>
+          Lorsqu'un Jeu vise une audience mixte et qu'un traitement différencié selon l'âge
+          est nécessaire, un mécanisme neutre de vérification de l'âge peut être utilisé avant
+          d'activer des fonctionnalités publicitaires ou de traitement dépendant de l'âge.
+        </p>
+        <p>
+          Si vous êtes parent ou représentant légal et pensez qu'un enfant a fourni des
+          données personnelles de manière inappropriée, contactez-nous afin que nous puissions
+          examiner la situation.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">13</span> Sécurité</h2>
+        <p>
+          Nous mettons en œuvre des mesures techniques et organisationnelles raisonnables
+          afin de protéger les informations contre l'accès, la modification, la divulgation
+          ou la perte non autorisés. Toutefois, aucune méthode de transmission sur Internet
+          ou de stockage électronique ne peut être garantie comme totalement sécurisée.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">14</span> Vos contrôles</h2>
+        <ul>
+          <li>
+            <strong>Contrôles dans l'application :</strong> lorsqu'ils sont disponibles,
+            utilisez l'écran de confidentialité ou d'options publicitaires du Jeu pour
+            consulter les choix proposés.
+          </li>
+          <li>
+            <strong>Contrôles de l'appareil :</strong> Android et les autres plateformes
+            proposent des paramètres de confidentialité, de publicité et d'autorisations
+            que vous pouvez gérer directement.
+          </li>
+          <li>
+            <strong>Nous contacter :</strong> vous pouvez contacter XoRdbX Studio pour
+            toute demande relative à la confidentialité concernant l'un de nos Jeux.
+          </li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">15</span> Contact</h2>
+        <p>
+          Pour toute question concernant cette Politique de confidentialité ou pour exercer
+          un droit, contactez-nous en précisant le Jeu concerné :
+        </p>
+        <a
+          class="contact-highlight"
+          href="#"
+          onclick="this.href='mailto:'+[...this.dataset.e.split(',')].reverse().map(n=>String.fromCharCode(+n)).join('');return true;"
+          data-e="109,111,99,46,108,105,97,109,103,64,54,55,120,98,100,114,111,120"
+        >✉ [email protected]</a>
+      </div>
+
+      <div class="policy-section">
+        <h2><span class="num">16</span> Modifications de cette Politique</h2>
+        <p>
+          Nous pouvons mettre à jour cette Politique lorsque nos Jeux, nos SDK, nos obligations
+          légales ou nos pratiques de traitement évoluent. La date de « Dernière mise à jour »
+          en haut de cette page sera modifiée à chaque révision.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
 
   <footer>
     <div>
       <strong>XoRdbX Studio</strong> — Independent Game Studio<br>
       RCS Valenciennes — SIREN 994 303 238 · VAT not applicable (Art. 293 B CGI)<br><br>
-      <a href="index.html">← Back to xordbx.github.io</a> &nbsp;·&nbsp; Copyright © 2026 XoRdbX Studio
+      <a href="index.html">← Back to xordbx.github.io</a>
+      &nbsp;·&nbsp;
+      Copyright © 2026 XoRdbX Studio
     </div>
   </footer>
 
@@ -557,9 +945,15 @@
     function switchLang(lang) {
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
       document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+
       document.querySelectorAll('.lang-tab').forEach((btn, i) => {
-        btn.classList.toggle('active', (i === 0 && lang === 'en') || (i === 1 && lang === 'fr'));
+        btn.classList.toggle(
+          'active',
+          (i === 0 && lang === 'en') || (i === 1 && lang === 'fr')
+        );
       });
+
+      document.documentElement.lang = lang;
     }
   </script>
 
