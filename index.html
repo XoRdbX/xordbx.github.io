@@ -12,7 +12,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>XoRdbX Studio — Independent Game Studio</title>
-  <meta name="description" content="XoRdbX is an independent game studio. Discover the studio identity and LexiGrid, its first word puzzle game for Android. Swap letters, form words, beat the clock." />
+  <meta name="description" content="XoRdbX is an independent game studio. Discover LexiGrid and LexiPops, two word games available on Android." />
   <style>
     :root {
       --bg: #f7efe4;
@@ -315,6 +315,65 @@
       background: rgba(201, 111, 59, 0.10);
     }
 
+    /* LEXIPOPS */
+    .lexipops-showcase {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .lexipops-art {
+      position: relative;
+      min-height: 420px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,.72) 0 7%, transparent 7.5%),
+        radial-gradient(circle at 84% 24%, rgba(255,255,255,.5) 0 5%, transparent 5.5%),
+        linear-gradient(145deg, #f8a73b, #ec6d78 52%, #8c68d8);
+      box-shadow: var(--shadow);
+    }
+
+    .pop-logo {
+      position: relative;
+      width: min(78%, 330px);
+      aspect-ratio: 1;
+    }
+
+    .pop-letter {
+      position: absolute;
+      width: 30%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      text-shadow: 0 3px 0 rgba(64, 31, 61, .18);
+      border: 5px solid rgba(255,255,255,.84);
+      box-shadow: 0 12px 24px rgba(74, 32, 67, .24), inset 0 4px 8px rgba(255,255,255,.3);
+    }
+
+    .pop-letter:nth-child(1) { left: 6%; top: 32%; background: #f15f72; transform: rotate(-9deg); }
+    .pop-letter:nth-child(2) { left: 35%; top: 15%; background: #5d9de0; transform: rotate(5deg); }
+    .pop-letter:nth-child(3) { right: 6%; top: 34%; background: #72bd65; transform: rotate(9deg); }
+    .pop-letter:nth-child(4) { left: 22%; bottom: 9%; background: #ed9a36; transform: rotate(7deg); }
+    .pop-letter:nth-child(5) { right: 20%; bottom: 7%; background: #9368ce; transform: rotate(-7deg); }
+
+    .app-kicker {
+      color: var(--accent-dark);
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-bottom: 8px;
+    }
+
     /* MEDIA */
     .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
@@ -500,6 +559,9 @@
 
       .video-frame { height: 340px; }
       p { text-align: left; }
+
+      .lexipops-showcase { grid-template-columns: 1fr; }
+      .lexipops-art { min-height: 340px; }
     }
 
     /* VOLUNTEERS */
@@ -592,6 +654,7 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">Studio</a>
         <a href="#games">Games</a>
+        <a href="#lexipops">LexiPops</a>
         <a href="#media">Media</a>
         <a href="#play">LexiGrid</a>
         <a href="#license">License</a>
@@ -609,11 +672,11 @@
         <p class="eyebrow">Independent Game Studio</p>
         <h1>XoRdbX Studio</h1>
         <p class="lead">
-          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences. Its first project, <strong>LexiGrid – Letter Swap Quest</strong>, is a fast-paced word puzzle game where players swap letters on a grid to build words before time runs out. Available now on Android.
+          <strong>XoRdbX</strong> is an independent game studio dedicated to creating clear, polished, and engaging game experiences. Discover <strong>LexiGrid – Letter Swap Quest</strong> and the studio's new word game, <strong>LexiPops</strong>. Both are available on Android.
         </p>
         <div class="actions">
-          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexigrid" target="_blank" rel="noopener">Download on Google Play</a>
-          <a class="btn" href="#games">Discover the game</a>
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Discover LexiPops</a>
+          <a class="btn" href="#games">See all games</a>
         </div>
       </div>
       <div class="hero-card">
@@ -661,7 +724,7 @@
               XoRdbX believes that word games are more than entertainment — they stimulate the mind, expand vocabulary, and sharpen cognitive skills. By combining this educational dimension with genuine fun and appealing aesthetics, the studio aims to create games that players return to day after day.
             </p>
             <p>
-              Future projects will continue to explore the intersection of puzzle mechanics, language, and elegant design. The catalog will grow, always guided by the same standards of quality and clarity that define LexiGrid.
+              New projects continue to explore the intersection of puzzle mechanics, language, and elegant design. With LexiPops joining LexiGrid, the catalog is growing while staying guided by the same standards of quality and clarity.
             </p>
           </div>
         </div>
@@ -690,7 +753,7 @@
               XoRdbX est convaincu que les jeux de mots sont bien plus que du divertissement — ils stimulent l'esprit, enrichissent le vocabulaire et aiguisent les capacités cognitives. En combinant cette dimension éducative avec un vrai plaisir de jeu et une esthétique soignée, le studio ambitionne de créer des jeux auxquels les joueurs reviennent chaque jour.
             </p>
             <p>
-              Les projets futurs continueront d'explorer la rencontre entre mécanique de puzzle, langage et design élégant. Le catalogue s'étoffera, toujours guidé par les mêmes exigences de qualité et de clarté qui définissent LexiGrid.
+              Les nouveaux projets continuent d'explorer la rencontre entre mécanique de puzzle, langage et design élégant. Avec LexiPops aux côtés de LexiGrid, le catalogue s'étoffe tout en restant guidé par les mêmes exigences de qualité et de clarté.
             </p>
           </div>
         </div>
@@ -772,6 +835,60 @@
                 allowfullscreen>
               </iframe>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LEXIPOPS ═══ -->
+  <section class="section alt" id="lexipops">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">New on Android</p>
+        <h2>Meet LexiPops</h2>
+        <p class="lead">A new word game from XoRdbX Studio, now available on Google Play.</p>
+      </div>
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('lexipops', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('lexipops', 'fr')">Français</button>
+      </div>
+
+      <div class="lexipops-showcase">
+        <div class="lexipops-art" aria-label="Colorful letter bubbles illustrating LexiPops" role="img">
+          <div class="pop-logo" aria-hidden="true">
+            <span class="pop-letter">L</span>
+            <span class="pop-letter">E</span>
+            <span class="pop-letter">X</span>
+            <span class="pop-letter">I</span>
+            <span class="pop-letter">!</span>
+          </div>
+        </div>
+
+        <div>
+          <div id="lexipops-en" class="lang-content active">
+            <article class="card">
+              <p class="app-kicker">Word game · Android</p>
+              <h3>Words ready to pop</h3>
+              <p><strong>LexiPops</strong> expands the XoRdbX catalog with a fresh word-game experience. Its colorful, playful identity invites word lovers to discover the studio's latest release on mobile.</p>
+              <p>Visit the official Google Play page to see the full game description, screenshots, current availability, and the latest app information.</p>
+              <div class="actions">
+                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Get LexiPops on Google Play</a>
+              </div>
+            </article>
+          </div>
+
+          <div id="lexipops-fr" class="lang-content">
+            <article class="card">
+              <p class="app-kicker">Jeu de mots · Android</p>
+              <h3>Des mots prêts à éclater</h3>
+              <p><strong>LexiPops</strong> enrichit le catalogue XoRdbX avec une nouvelle expérience autour des mots. Son univers coloré et ludique invite les amoureux des lettres à découvrir la dernière création mobile du studio.</p>
+              <p>Rendez-vous sur la page officielle Google Play pour consulter la description complète du jeu, ses captures d'écran, sa disponibilité actuelle et les dernières informations sur l'application.</p>
+              <div class="actions">
+                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Télécharger sur Google Play</a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -1272,7 +1389,7 @@ A F C I T R O N V M</div>
 
     <div class="footer-note">
       <strong>XoRdbX Studio — Independent game studio.</strong><br>
-      Official website presenting the studio and its current project, LexiGrid.
+      Official website presenting the studio and its word games, LexiGrid and LexiPops.
     </div>
 
     <div class="footer-legal">
