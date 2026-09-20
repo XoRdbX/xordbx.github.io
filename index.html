@@ -338,32 +338,24 @@
       box-shadow: var(--shadow);
     }
 
-    .pop-logo {
+    .lexipops-art img {
       position: relative;
-      width: min(78%, 330px);
-      aspect-ratio: 1;
+      width: min(82%, 360px);
+      max-height: 360px;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 28px rgba(74, 32, 67, .28));
     }
 
-    .pop-letter {
-      position: absolute;
-      width: 30%;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      font-weight: 800;
-      text-shadow: 0 3px 0 rgba(64, 31, 61, .18);
-      border: 5px solid rgba(255,255,255,.84);
-      box-shadow: 0 12px 24px rgba(74, 32, 67, .24), inset 0 4px 8px rgba(255,255,255,.3);
+    .highlights-visual {
+      padding: 24px;
     }
 
-    .pop-letter:nth-child(1) { left: 6%; top: 32%; background: #f15f72; transform: rotate(-9deg); }
-    .pop-letter:nth-child(2) { left: 35%; top: 15%; background: #5d9de0; transform: rotate(5deg); }
-    .pop-letter:nth-child(3) { right: 6%; top: 34%; background: #72bd65; transform: rotate(9deg); }
-    .pop-letter:nth-child(4) { left: 22%; bottom: 9%; background: #ed9a36; transform: rotate(7deg); }
-    .pop-letter:nth-child(5) { right: 20%; bottom: 7%; background: #9368ce; transform: rotate(-7deg); }
+    .highlights-visual img {
+      width: 100%;
+      height: 100%;
+      max-height: 560px;
+      object-fit: contain;
+    }
 
     .app-kicker {
       color: var(--accent-dark);
@@ -376,6 +368,10 @@
 
     /* MEDIA */
     .media-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .media-grid.two-up { grid-template-columns: repeat(2, 1fr); }
+
+    .feature-stack { grid-template-columns: 1fr; }
 
     .media-box {
       border-radius: var(--radius-sm);
@@ -544,6 +540,8 @@
         grid-template-columns: 1fr;
       }
 
+      .media-grid.two-up { grid-template-columns: 1fr; }
+
       .topbar-inner {
         align-items: flex-start;
         padding: 14px 0;
@@ -653,10 +651,9 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">Studio</a>
-        <a href="#games">Games</a>
+        <a href="#games">LexiGrid</a>
+        <a href="#play">Download</a>
         <a href="#lexipops">LexiPops</a>
-        <a href="#media">Media</a>
-        <a href="#play">LexiGrid</a>
         <a href="#license">License</a>
 		<a href="#volunteers">Grids</a>
         <a href="#contact">Contact</a>
@@ -841,60 +838,6 @@
     </div>
   </section>
 
-  <!-- ═══ LEXIPOPS ═══ -->
-  <section class="section alt" id="lexipops">
-    <div class="container">
-      <div class="section-header">
-        <p class="eyebrow">New on Android</p>
-        <h2>Meet LexiPops</h2>
-        <p class="lead">A new word game from XoRdbX Studio, now available on Google Play.</p>
-      </div>
-
-      <div class="lang-tabs">
-        <button class="lang-tab active" onclick="switchLang('lexipops', 'en')">English</button>
-        <button class="lang-tab" onclick="switchLang('lexipops', 'fr')">Français</button>
-      </div>
-
-      <div class="lexipops-showcase">
-        <div class="lexipops-art" aria-label="Colorful letter bubbles illustrating LexiPops" role="img">
-          <div class="pop-logo" aria-hidden="true">
-            <span class="pop-letter">L</span>
-            <span class="pop-letter">E</span>
-            <span class="pop-letter">X</span>
-            <span class="pop-letter">I</span>
-            <span class="pop-letter">!</span>
-          </div>
-        </div>
-
-        <div>
-          <div id="lexipops-en" class="lang-content active">
-            <article class="card">
-              <p class="app-kicker">Word game · Android</p>
-              <h3>Words ready to pop</h3>
-              <p><strong>LexiPops</strong> expands the XoRdbX catalog with a fresh word-game experience. Its colorful, playful identity invites word lovers to discover the studio's latest release on mobile.</p>
-              <p>Visit the official Google Play page to see the full game description, screenshots, current availability, and the latest app information.</p>
-              <div class="actions">
-                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Get LexiPops on Google Play</a>
-              </div>
-            </article>
-          </div>
-
-          <div id="lexipops-fr" class="lang-content">
-            <article class="card">
-              <p class="app-kicker">Jeu de mots · Android</p>
-              <h3>Des mots prêts à éclater</h3>
-              <p><strong>LexiPops</strong> enrichit le catalogue XoRdbX avec une nouvelle expérience autour des mots. Son univers coloré et ludique invite les amoureux des lettres à découvrir la dernière création mobile du studio.</p>
-              <p>Rendez-vous sur la page officielle Google Play pour consulter la description complète du jeu, ses captures d'écran, sa disponibilité actuelle et les dernières informations sur l'application.</p>
-              <div class="actions">
-                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Télécharger sur Google Play</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ FEATURES ═══ -->
   <section class="section alt" id="features">
     <div class="container">
@@ -983,6 +926,100 @@
             <li><strong>Package:</strong> com.xordbx.lexigrid</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LEXIPOPS ═══ -->
+  <section class="section alt" id="lexipops">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">New on Android</p>
+        <h2>Meet LexiPops</h2>
+        <p class="lead">A new word game from XoRdbX Studio, now available on Google Play.</p>
+      </div>
+
+      <div class="lang-tabs">
+        <button class="lang-tab active" onclick="switchLang('lexipops', 'en')">English</button>
+        <button class="lang-tab" onclick="switchLang('lexipops', 'fr')">Français</button>
+      </div>
+
+      <div class="lexipops-showcase">
+        <div class="lexipops-art">
+          <img src="LexiPops_icon_big.png" alt="LexiPops game icon">
+        </div>
+
+        <div>
+          <div id="lexipops-en" class="lang-content active">
+            <article class="card">
+              <p class="app-kicker">Word game · Android</p>
+              <h3>Words ready to pop</h3>
+              <p><strong>LexiPops</strong> expands the XoRdbX catalog with a fresh word-game experience. Its colorful, playful identity invites word lovers to discover the studio's latest release on mobile.</p>
+              <p>Visit the official Google Play page to see the full game description, screenshots, current availability, and the latest app information.</p>
+              <div class="actions">
+                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Get LexiPops on Google Play</a>
+              </div>
+            </article>
+          </div>
+
+          <div id="lexipops-fr" class="lang-content">
+            <article class="card">
+              <p class="app-kicker">Jeu de mots · Android</p>
+              <h3>Des mots prêts à éclater</h3>
+              <p><strong>LexiPops</strong> enrichit le catalogue XoRdbX avec une nouvelle expérience autour des mots. Son univers coloré et ludique invite les amoureux des lettres à découvrir la dernière création mobile du studio.</p>
+              <p>Rendez-vous sur la page officielle Google Play pour consulter la description complète du jeu, ses captures d'écran, sa disponibilité actuelle et les dernières informations sur l'application.</p>
+              <div class="actions">
+                <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.xordbx.lexipops" target="_blank" rel="noopener">Télécharger sur Google Play</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ LEXIPOPS FEATURES ═══ -->
+  <section class="section" id="lexipops-features">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">LexiPops</p>
+        <h2>Core game highlights</h2>
+        <p class="lead">A playful word challenge with its own colorful identity, mechanics, and rhythm.</p>
+      </div>
+      <div class="two-col">
+        <div class="card project-visual highlights-visual">
+          <img src="lp_illustrations.png" alt="Illustrations of LexiPops core game features">
+        </div>
+        <div class="cards feature-stack">
+          <article class="card feature-card">
+            <h3>Pop, connect, and discover</h3>
+            <p>Explore a lively field of letters, find the right combinations, and pop your way through each word challenge.</p>
+          </article>
+          <article class="card feature-card">
+            <h3>Made for quick sessions</h3>
+            <p>Clear interactions and a mobile-first format make LexiPops easy to start whenever you have a few minutes to play.</p>
+          </article>
+          <article class="card feature-card">
+            <h3>A distinct playful world</h3>
+            <p>Bright colors, rounded shapes, and expressive visuals give LexiPops a personality clearly distinct from LexiGrid.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LEXIPOPS MEDIA ═══ -->
+  <section class="section alt" id="lexipops-media">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">LexiPops · Media</p>
+        <h2>LexiPops in action</h2>
+        <p class="lead">Discover LexiPops' colorful interface and word-popping gameplay.</p>
+      </div>
+      <div class="media-grid two-up">
+        <div class="media-box"><img src="LexiPops.png" alt="LexiPops menu screenshot"></div>
+        <div class="media-box"><img src="LexiPops_game.png" alt="LexiPops gameplay screenshot"></div>
       </div>
     </div>
   </section>
